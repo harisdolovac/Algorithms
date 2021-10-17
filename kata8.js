@@ -33,14 +33,29 @@
 //   return "hello world!";
 // }
 
-function defineSuit(card) {
-  if (card.includes("♣")) {
-    return "clubs";
-  } else if (card.includes("♦")) {
-    return "diamonds";
-  } else if (card.includes("♥")) {
-    return "hearts";
-  } else return "spades";
-}
+// function defineSuit(card) {
+//   if (card.includes("♣")) {
+//     return "clubs";
+//   } else if (card.includes("♦")) {
+//     return "diamonds";
+//   } else if (card.includes("♥")) {
+//     return "hearts";
+//   } else return "spades";
+// }
 
-console.log(defineSuit("♦♦"));
+// console.log(defineSuit("♦♦"));
+
+function calculateAge(birth, thisYear) {
+  if (birth > thisYear) {
+    return birth - thisYear > 1
+      ? `You will be born in ${birth - thisYear} years.`
+      : `You will be born in ${birth - thisYear} year.`;
+  } else if (birth === thisYear) {
+    return "You were born this very year!";
+  } else {
+    return thisYear - birth > 1
+      ? `You are ${thisYear - birth} years old.`
+      : `You are ${thisYear - birth} year old.`;
+  }
+}
+console.log(calculateAge(2015, 2016));
