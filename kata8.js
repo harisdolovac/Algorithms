@@ -45,17 +45,30 @@
 
 // console.log(defineSuit("♦♦"));
 
-function calculateAge(birth, thisYear) {
-  if (birth > thisYear) {
-    return birth - thisYear > 1
-      ? `You will be born in ${birth - thisYear} years.`
-      : `You will be born in ${birth - thisYear} year.`;
-  } else if (birth === thisYear) {
-    return "You were born this very year!";
-  } else {
-    return thisYear - birth > 1
-      ? `You are ${thisYear - birth} years old.`
-      : `You are ${thisYear - birth} year old.`;
+// function calculateAge(birth, thisYear) {
+//   if (birth > thisYear) {
+//     return birth - thisYear > 1
+//       ? `You will be born in ${birth - thisYear} years.`
+//       : `You will be born in ${birth - thisYear} year.`;
+//   } else if (birth === thisYear) {
+//     return "You were born this very year!";
+//   } else {
+//     return thisYear - birth > 1
+//       ? `You are ${thisYear - birth} years old.`
+//       : `You are ${thisYear - birth} year old.`;
+//   }
+// }
+// console.log(calculateAge(2015, 2016));
+
+function distinct(a) {
+  final = [];
+  for (let i = 0; i < a.length; i++) {
+    const element = a[i];
+    if (!final.includes(element)) {
+      final.push(element);
+    }
   }
+  return final;
 }
-console.log(calculateAge(2015, 2016));
+
+console.log(distinct([1, 1, 2]), [1, 2]);
