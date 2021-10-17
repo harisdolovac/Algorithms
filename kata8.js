@@ -60,15 +60,23 @@
 // }
 // console.log(calculateAge(2015, 2016));
 
-function distinct(a) {
-  final = [];
-  for (let i = 0; i < a.length; i++) {
-    const element = a[i];
-    if (!final.includes(element)) {
-      final.push(element);
-    }
-  }
-  return final;
+// function distinct(a) {
+//   final = [];
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     if (!final.includes(element)) {
+//       final.push(element);
+//     }
+//   }
+//   return final;
+// }
+
+// console.log(distinct([1, 1, 2]), [1, 2]);
+
+function hello(name) {
+  return name
+    ? `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
+    : "Hello, World!";
 }
 
-console.log(distinct([1, 1, 2]), [1, 2]);
+console.log(hello(), "Hello, John!");
