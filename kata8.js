@@ -29,6 +29,18 @@
 
 // console.log(even_or_odd(2));
 
-function greet() {
-  return "hello world!";
+// function greet() {
+//   return "hello world!";
+// }
+
+function defineSuit(card) {
+  if (card.includes("♣")) {
+    return "clubs";
+  } else if (card.includes("♦")) {
+    return "diamonds";
+  } else if (card.includes("♥")) {
+    return "hearts";
+  } else return "spades";
 }
+
+console.log(defineSuit("♦♦"));
