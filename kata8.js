@@ -96,13 +96,25 @@
 
 // console.log(twoHighest([15, 20, 20, 17]));
 
-function billboard(name, price = 30) {
-  let PriceName = 0;
-  for (let i = 0; i < name.length; i++) {
-    const element = name[i];
-    PriceName += price;
+// function billboard(name, price = 30) {
+//   let PriceName = 0;
+//   for (let i = 0; i < name.length; i++) {
+//     PriceName += price;
+//   }
+//   return PriceName;
+// }
+
+// console.log(billboard("Jeong-Ho Aristotelis"));
+
+function strCount(str, letter) {
+  let final = [];
+  for (let i = 0; i < str.length; i++) {
+    const element = str[i];
+    if (element.includes(letter)) {
+      final.push(letter);
+    }
   }
-  return PriceName;
+  return final.length;
 }
 
-console.log(billboard("Jeong-Ho Aristotelis"));
+console.log(strCount("hello", "o"), 1);
