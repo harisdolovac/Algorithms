@@ -81,17 +81,28 @@
 
 // console.log(hello(), "Hello, John!");
 
-function twoHighest(arr) {
-  let final = [];
-  let sortedArr = arr.sort((a, b) => b - a);
-  for (let i = 0; i < sortedArr.length; i++) {
-    const element = sortedArr[i];
-    if (!final.includes(element)) {
-      final.push(element);
-    }
-  }
+// function twoHighest(arr) {
+//   let final = [];
+//   let sortedArr = arr.sort((a, b) => b - a);
+//   for (let i = 0; i < sortedArr.length; i++) {
+//     const element = sortedArr[i];
+//     if (!final.includes(element)) {
+//       final.push(element);
+//     }
+//   }
 
-  return final.slice(0, 2);
+//   return final.slice(0, 2);
+// }
+
+// console.log(twoHighest([15, 20, 20, 17]));
+
+function billboard(name, price = 30) {
+  let PriceName = 0;
+  for (let i = 0; i < name.length; i++) {
+    const element = name[i];
+    PriceName += price;
+  }
+  return PriceName;
 }
 
-console.log(twoHighest([15, 20, 20, 17]));
+console.log(billboard("Jeong-Ho Aristotelis"));
