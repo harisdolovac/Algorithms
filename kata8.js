@@ -73,10 +73,25 @@
 
 // console.log(distinct([1, 1, 2]), [1, 2]);
 
-function hello(name) {
-  return name
-    ? `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
-    : "Hello, World!";
+// function hello(name) {
+//   return name
+//     ? `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
+//     : "Hello, World!";
+// }
+
+// console.log(hello(), "Hello, John!");
+
+function twoHighest(arr) {
+  let final = [];
+  let sortedArr = arr.sort((a, b) => b - a);
+  for (let i = 0; i < sortedArr.length; i++) {
+    const element = sortedArr[i];
+    if (!final.includes(element)) {
+      final.push(element);
+    }
+  }
+
+  return final.slice(0, 2);
 }
 
-console.log(hello(), "Hello, John!");
+console.log(twoHighest([15, 20, 20, 17]));
