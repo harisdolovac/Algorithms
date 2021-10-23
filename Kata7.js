@@ -753,15 +753,27 @@
 // var s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
 // console.log(printerError(s), "3/56");
 
-function SeriesSum(n) {
-  let a = 1;
-  let sum = 0;
-  for (let i = 0; i < n; i++) {
-    sum += 1 / a;
-    a += 3;
-    console.log(a);
-  }
-  return sum.toFixed(2);
-}
+// function SeriesSum(n) {
+//   let a = 1;
+//   let sum = 0;
+//   for (let i = 0; i < n; i++) {
+//     sum += 1 / a;
+//     a += 3;
+//     console.log(a);
+//   }
+//   return sum.toFixed(2);
+// }
 
-console.log(SeriesSum(5), "1.57");
+// console.log(SeriesSum(5), "1.57");
+
+var capitals = function (word) {
+  let final = [];
+  for (let i = 0; i < word.length; i++) {
+    const element = word[i];
+    if (element.toUpperCase() === element) {
+      final.push(i);
+    }
+  }
+  return final;
+};
+console.log(capitals("CodEWaRs"), [0, 3, 4, 6]);
