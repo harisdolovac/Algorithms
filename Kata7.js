@@ -695,19 +695,32 @@
 
 // console.log(descendingOrder(1021));
 
-function nbYear(p0, percent, aug, p) {
-  //1000 + 1000 * 0.02 + 50 => 1070
+// function nbYear(p0, percent, aug, p) {
+//   //1000 + 1000 * 0.02 + 50 => 1070
 
-  let totalYears = 0;
+//   let totalYears = 0;
 
-  const getNextPopulation = (current) =>
-    current + (current * percent) / 100 + aug;
+//   const getNextPopulation = (current) =>
+//     current + (current * percent) / 100 + aug;
 
-  while (p0 <= p) {
-    p0 = getNextPopulation(p0);
-    totalYears++;
+//   while (p0 <= p) {
+//     p0 = getNextPopulation(p0);
+//     totalYears++;
+//   }
+//   return totalYears++;
+// }
+
+// console.log(nbYear(1500, 5, 100, 5000));
+
+function divisors(integer) {
+  let final = [];
+  for (let i = 2; i < integer; i++) {
+    if (integer % i === 0) {
+      final.push(i);
+    }
   }
-  return totalYears++;
+  return final.length > 0 ? final : `${integer} is prime`;
+  return final;
 }
 
-console.log(nbYear(1500, 5, 100, 5000));
+console.log(divisors(12));
