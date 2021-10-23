@@ -725,15 +725,30 @@
 
 // console.log(divisors(12));
 
-function squareDigits(num) {
-  let a = num.toString();
-  let sum = [];
-  for (let i = 0; i < a.length; i++) {
-    const element = +a[i];
-    sum.push(element * element);
+// function squareDigits(num) {
+//   let a = num.toString();
+//   let sum = [];
+//   for (let i = 0; i < a.length; i++) {
+//     const element = +a[i];
+//     sum.push(element * element);
+//   }
+
+//   return +sum.join("");
+// }
+
+// console.log(squareDigits(345), 9414);
+
+function printerError(s) {
+  let count = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    const element = s[i];
+
+    if (element > "m") {
+      count++;
+    }
   }
-
-  return +sum.join("");
+  return `${count}/${s.length}`;
 }
-
-console.log(squareDigits(345), 9414);
+var s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+console.log(printerError(s), "3/56");
