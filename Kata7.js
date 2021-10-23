@@ -712,15 +712,28 @@
 
 // console.log(nbYear(1500, 5, 100, 5000));
 
-function divisors(integer) {
-  let final = [];
-  for (let i = 2; i < integer; i++) {
-    if (integer % i === 0) {
-      final.push(i);
-    }
+// function divisors(integer) {
+//   let final = [];
+//   for (let i = 2; i < integer; i++) {
+//     if (integer % i === 0) {
+//       final.push(i);
+//     }
+//   }
+//   return final.length > 0 ? final : `${integer} is prime`;
+//   return final;
+// }
+
+// console.log(divisors(12));
+
+function squareDigits(num) {
+  let a = num.toString();
+  let sum = [];
+  for (let i = 0; i < a.length; i++) {
+    const element = +a[i];
+    sum.push(element * element);
   }
-  return final.length > 0 ? final : `${integer} is prime`;
-  return final;
+
+  return +sum.join("");
 }
 
-console.log(divisors(12));
+console.log(squareDigits(345), 9414);
