@@ -684,13 +684,30 @@
 
 // console.log(removeChar("eloquent"));
 
-function descendingOrder(n) {
-  const reverse = n
-    .toString()
-    .split("")
-    .sort((a, b) => b - a)
-    .join("");
-  return Number(reverse);
+// function descendingOrder(n) {
+//   const reverse = n
+//     .toString()
+//     .split("")
+//     .sort((a, b) => b - a)
+//     .join("");
+//   return Number(reverse);
+// }
+
+// console.log(descendingOrder(1021));
+
+function nbYear(p0, percent, aug, p) {
+  //1000 + 1000 * 0.02 + 50 => 1070
+
+  let totalYears = 0;
+
+  const getNextPopulation = (current) =>
+    current + (current * percent) / 100 + aug;
+
+  while (p0 <= p) {
+    p0 = getNextPopulation(p0);
+    totalYears++;
+  }
+  return totalYears++;
 }
 
-console.log(descendingOrder(1021));
+console.log(nbYear(1500, 5, 100, 5000));
