@@ -738,17 +738,30 @@
 
 // console.log(squareDigits(345), 9414);
 
-function printerError(s) {
-  let count = 0;
+// function printerError(s) {
+//   let count = 0;
 
-  for (let i = 0; i < s.length; i++) {
-    const element = s[i];
+//   for (let i = 0; i < s.length; i++) {
+//     const element = s[i];
 
-    if (element > "m") {
-      count++;
-    }
+//     if (element > "m") {
+//       count++;
+//     }
+//   }
+//   return `${count}/${s.length}`;
+// }
+// var s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+// console.log(printerError(s), "3/56");
+
+function SeriesSum(n) {
+  let a = 1;
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += 1 / a;
+    a += 3;
+    console.log(a);
   }
-  return `${count}/${s.length}`;
+  return sum.toFixed(2);
 }
-var s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
-console.log(printerError(s), "3/56");
+
+console.log(SeriesSum(5), "1.57");
