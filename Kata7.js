@@ -766,14 +766,32 @@
 
 // console.log(SeriesSum(5), "1.57");
 
-var capitals = function (word) {
-  let final = [];
-  for (let i = 0; i < word.length; i++) {
-    const element = word[i];
-    if (element.toUpperCase() === element) {
-      final.push(i);
-    }
+// var capitals = function (word) {
+//   let final = [];
+//   for (let i = 0; i < word.length; i++) {
+//     const element = word[i];
+//     if (element.toUpperCase() === element) {
+//       final.push(i);
+//     }
+//   }
+//   return final;
+// };
+// console.log(capitals("CodEWaRs"), [0, 3, 4, 6]);
+
+const binaryArrayToNumber = (arr) => {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    // console.log(element);
+
+    // element *= 2;
+    // console.log(element);
+    // console.log(i);
+    // count += Math.pow(element, i);
+    // console.log(count);
   }
-  return final;
+  return count;
 };
-console.log(capitals("CodEWaRs"), [0, 3, 4, 6]);
+
+console.log(binaryArrayToNumber([0, 1]), 15);
