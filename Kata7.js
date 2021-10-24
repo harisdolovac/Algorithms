@@ -796,12 +796,31 @@
 
 // console.log(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"]);
 
-const sequenceSum = (begin, end, step) => {
-  let sum = 0;
-  for (let i = begin; i <= end; i += step) {
-    sum += i;
-  }
-  return sum;
-};
+// const sequenceSum = (begin, end, step) => {
+//   let sum = 0;
+//   for (let i = begin; i <= end; i += step) {
+//     sum += i;
+//   }
+//   return sum;
+// };
 
-console.log(sequenceSum(2, 6, 2), 12);
+// console.log(sequenceSum(2, 6, 2), 12);
+
+function amaroPlan(pirateNum) {
+  let finalArr = [];
+  const totalGold = pirateNum * 20;
+
+  for (let i = 0; i < pirateNum; i++) {
+    if (i === 0) {
+      const gold = totalGold - Math.floor((pirateNum - 1) / 2);
+      finalArr.push(gold);
+    } else if (i % 2 === 0) {
+      finalArr.push(1);
+    } else {
+      finalArr.push(0);
+    }
+  }
+
+  return finalArr;
+}
+console.log(amaroPlan(3), [40, 0]);
