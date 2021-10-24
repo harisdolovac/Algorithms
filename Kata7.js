@@ -806,21 +806,46 @@
 
 // console.log(sequenceSum(2, 6, 2), 12);
 
-function amaroPlan(pirateNum) {
-  let finalArr = [];
-  const totalGold = pirateNum * 20;
+// function amaroPlan(pirateNum) {
+//   let finalArr = [];
+//   const totalGold = pirateNum * 20;
 
-  for (let i = 0; i < pirateNum; i++) {
-    if (i === 0) {
-      const gold = totalGold - Math.floor((pirateNum - 1) / 2);
-      finalArr.push(gold);
-    } else if (i % 2 === 0) {
-      finalArr.push(1);
-    } else {
-      finalArr.push(0);
+//   for (let i = 0; i < pirateNum; i++) {
+//     if (i === 0) {
+//       const gold = totalGold - Math.floor((pirateNum - 1) / 2);
+//       finalArr.push(gold);
+//     } else if (i % 2 === 0) {
+//       finalArr.push(1);
+//     } else {
+//       finalArr.push(0);
+//     }
+//   }
+
+//   return finalArr;
+// }
+// console.log(amaroPlan(3), [40, 0]);
+
+function removeSmallest(numbers) {
+  let smalest = 1;
+  let smalestIndex = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    const element = numbers[i];
+    if (element < smalest) {
+      smalest = element;
+      smalestIndex = i;
     }
   }
 
+  let finalArr = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    const element = numbers[i];
+    if (i !== smalestIndex) {
+      finalArr.push(element);
+    }
+  }
   return finalArr;
 }
-console.log(amaroPlan(3), [40, 0]);
+
+console.log(removeSmallest([5, 7, 1, 2, 3, 4, 5]));
