@@ -778,20 +778,20 @@
 // };
 // console.log(capitals("CodEWaRs"), [0, 3, 4, 6]);
 
-const binaryArrayToNumber = (arr) => {
-  let count = 0;
+// const binaryArrayToNumber = (arr) => {
+//   let count = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    let element = arr[i];
-    // console.log(element);
+//   for (let i = 0; i < arr.length; i++) {
+//      let element = arr[i];
+//     count += (2**(arr.length-1-i)*element)
+//   }
+//   return count;
+// };
 
-    // element *= 2;
-    // console.log(element);
-    // console.log(i);
-    // count += Math.pow(element, i);
-    // console.log(count);
-  }
-  return count;
-};
+// console.log(binaryArrayToNumber([1,0,1]), 15);
 
-console.log(binaryArrayToNumber([0, 1]), 15);
+function friend(friends) {
+  return friends.filter((item) => item.length === 4);
+}
+
+console.log(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"]);
