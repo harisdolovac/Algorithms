@@ -825,27 +825,9 @@
 // }
 // console.log(amaroPlan(3), [40, 0]);
 
-function removeSmallest(numbers) {
-  let smalest = 1;
-  let smalestIndex = 0;
-
-  for (let i = 0; i < numbers.length; i++) {
-    const element = numbers[i];
-    if (element < smalest) {
-      smalest = element;
-      smalestIndex = i;
-    }
-  }
-
-  let finalArr = [];
-
-  for (let i = 0; i < numbers.length; i++) {
-    const element = numbers[i];
-    if (i !== smalestIndex) {
-      finalArr.push(element);
-    }
-  }
-  return finalArr;
+function sortByLength(array) {
+  // Return an array containing the same strings, ordered from shortest to longest
+  return array.sort((a, b) => a.length - b.length);
 }
 
-console.log(removeSmallest([5, 7, 1, 2, 3, 4, 5]));
+console.log(sortByLength(["Beg", "Life", "I", "To"]));
