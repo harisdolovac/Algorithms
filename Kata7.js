@@ -790,8 +790,18 @@
 
 // console.log(binaryArrayToNumber([1,0,1]), 15);
 
-function friend(friends) {
-  return friends.filter((item) => item.length === 4);
-}
+// function friend(friends) {
+//   return friends.filter((item) => item.length === 4);
+// }
 
-console.log(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"]);
+// console.log(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"]);
+
+const sequenceSum = (begin, end, step) => {
+  let sum = 0;
+  for (let i = begin; i <= end; i += step) {
+    sum += i;
+  }
+  return sum;
+};
+
+console.log(sequenceSum(2, 6, 2), 12);
