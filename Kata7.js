@@ -825,9 +825,14 @@
 // }
 // console.log(amaroPlan(3), [40, 0]);
 
-function sortByLength(array) {
-  // Return an array containing the same strings, ordered from shortest to longest
-  return array.sort((a, b) => a.length - b.length);
+// function sortByLength(array) {
+//   // Return an array containing the same strings, ordered from shortest to longest
+//   return array.sort((a, b) => a.length - b.length);
+// }
+
+function twoOldestAges(ages) {
+  let a = ages.sort((a, b) => b - a);
+  return [a[1], a[0]];
 }
 
-console.log(sortByLength(["Beg", "Life", "I", "To"]));
+console.log(twoOldestAges([1, 5, 87, 45, 8, 8]));
