@@ -837,11 +837,36 @@
 
 // console.log(twoOldestAges([1, 5, 87, 45, 8, 8]));
 
-function solution(nums) {
-  if (nums === null) {
-    return [];
+// function solution(nums) {
+//   if (nums === null) {
+//     return [];
+//   }
+//   return nums.sort((a, b) => a - b);
+// }
+
+// console.log(solution(null));
+
+function openOrSenior(data) {
+  let final = [];
+  for (let i = 0; i < data.length; i++) {
+    const element = data[i];
+    console.log(element);
+
+    console.log(element);
+    if (element[0] >= 55 && element[1] > 7) {
+      final.push("Senior");
+    } else {
+      final.push("Open");
+    }
   }
-  return nums.sort((a, b) => a - b);
+  return final;
 }
 
-console.log(solution(null));
+console.log(
+  openOrSenior([
+    [45, 12],
+    [55, 21],
+    [19, -2],
+    [104, 20],
+  ])
+);
