@@ -846,27 +846,33 @@
 
 // console.log(solution(null));
 
-function openOrSenior(data) {
-  let final = [];
-  for (let i = 0; i < data.length; i++) {
-    const element = data[i];
-    console.log(element);
+// function openOrSenior(data) {
+//   let final = [];
+//   for (let i = 0; i < data.length; i++) {
+//     const element = data[i];
+//     console.log(element);
 
-    console.log(element);
-    if (element[0] >= 55 && element[1] > 7) {
-      final.push("Senior");
-    } else {
-      final.push("Open");
-    }
-  }
-  return final;
+//     console.log(element);
+//     if (element[0] >= 55 && element[1] > 7) {
+//       final.push("Senior");
+//     } else {
+//       final.push("Open");
+//     }
+//   }
+//   return final;
+// }
+
+// console.log(
+//   openOrSenior([
+//     [45, 12],
+//     [55, 21],
+//     [19, -2],
+//     [104, 20],
+//   ])
+// );
+
+function addBinary(a, b) {
+  let c = a + b;
+  return c.toString(2);
 }
-
-console.log(
-  openOrSenior([
-    [45, 12],
-    [55, 21],
-    [19, -2],
-    [104, 20],
-  ])
-);
+console.log(addBinary(1, 5));
