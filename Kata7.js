@@ -830,9 +830,18 @@
 //   return array.sort((a, b) => a.length - b.length);
 // }
 
-function twoOldestAges(ages) {
-  let a = ages.sort((a, b) => b - a);
-  return [a[1], a[0]];
+// function twoOldestAges(ages) {
+//   let a = ages.sort((a, b) => b - a);
+//   return [a[1], a[0]];
+// }
+
+// console.log(twoOldestAges([1, 5, 87, 45, 8, 8]));
+
+function solution(nums) {
+  if (nums === null) {
+    return [];
+  }
+  return nums.sort((a, b) => a - b);
 }
 
-console.log(twoOldestAges([1, 5, 87, 45, 8, 8]));
+console.log(solution(null));
