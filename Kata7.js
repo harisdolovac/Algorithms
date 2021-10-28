@@ -871,8 +871,23 @@
 //   ])
 // );
 
-function addBinary(a, b) {
-  let c = a + b;
-  return c.toString(2);
+// function addBinary(a, b) {
+//   let c = a + b;
+//   return c.toString(2);
+// }
+// console.log(addBinary(1, 5));
+
+function calculateYears(principal, interest, tax, desired) {
+  let i = 0;
+  while (principal < desired) {
+    total_interest = principal * interest;
+    interest_tax = total_interest * tax;
+    principal = principal + (total_interest - interest_tax);
+    console.log(interest_tax);
+    i++;
+  }
+
+  return i;
 }
-console.log(addBinary(1, 5));
+
+console.log(calculateYears(1000, 0.05, 0.18, 1000));
