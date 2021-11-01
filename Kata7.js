@@ -955,15 +955,19 @@
 
 // console.log(solve("CODe"), "CODE");
 
-var isSquare = function (n) {
-  // if (n == 0) {
-  //   return true;
-  // }
-  let a = Math.sqrt(n);
-  if (Math.floor(a)) {
-  }
-  console.log(a);
-  return Math.sqrt(n) % 1 != 0 ? true : false;
-};
+// var isSquare = function (n) {
+//   return Math.sqrt(n) % 1 !=0 ? false : true;
+// };
 
-console.log(isSquare(3));
+// console.log(isSquare(3));
+
+function median(array) {
+  if (array.length % 2 === 0) {
+    let a = array.sort((a, b) => a - b);
+    let middleNum = a.length / 2;
+    console.log(middleNum);
+    return (a[middleNum] + a[middleNum - 1]) / 2;
+  }
+}
+
+console.log(median([83, 275, 590]), 2);
