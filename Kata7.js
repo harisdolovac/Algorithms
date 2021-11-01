@@ -924,10 +924,33 @@
 // }
 // console.log(toJadenCase("How can mirrors"));
 
-function toJadenCase(s) {
-  const words = s.split(" ");
+// function toJadenCase(s) {
+//   const words = s.split(" ");
 
-  let final = words.map((item) => item[0].toUpperCase() + item.slice(1));
-  return final.join(" ");
+//   let final = words.map((item) => item[0].toUpperCase() + item.slice(1));
+//   return final.join(" ");
+// }
+// console.log(toJadenCase("How can mirrors"));
+
+function solve(s) {
+  let upperCaseNumber = 0;
+  let lowerCaseNumber = 0;
+
+  console.log(s.toUpperCase());
+  for (let i = 0; i < s.length; i++) {
+    const element = s[i];
+    if (element === element.toUpperCase()) {
+      upperCaseNumber++;
+    } else {
+      lowerCaseNumber++;
+    }
+  }
+
+  if (upperCaseNumber > lowerCaseNumber) {
+    return s.toUpperCase();
+  } else {
+    return s.toLowerCase();
+  }
 }
-console.log(toJadenCase("How can mirrors"));
+
+console.log(solve("CODe"), "CODE");
