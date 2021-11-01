@@ -932,25 +932,38 @@
 // }
 // console.log(toJadenCase("How can mirrors"));
 
-function solve(s) {
-  let upperCaseNumber = 0;
-  let lowerCaseNumber = 0;
+// function solve(s) {
+//   let upperCaseNumber = 0;
+//   let lowerCaseNumber = 0;
 
-  console.log(s.toUpperCase());
-  for (let i = 0; i < s.length; i++) {
-    const element = s[i];
-    if (element === element.toUpperCase()) {
-      upperCaseNumber++;
-    } else {
-      lowerCaseNumber++;
-    }
+//   console.log(s.toUpperCase());
+//   for (let i = 0; i < s.length; i++) {
+//     const element = s[i];
+//     if (element === element.toUpperCase()) {
+//       upperCaseNumber++;
+//     } else {
+//       lowerCaseNumber++;
+//     }
+//   }
+
+//   if (upperCaseNumber > lowerCaseNumber) {
+//     return s.toUpperCase();
+//   } else {
+//     return s.toLowerCase();
+//   }
+// }
+
+// console.log(solve("CODe"), "CODE");
+
+var isSquare = function (n) {
+  // if (n == 0) {
+  //   return true;
+  // }
+  let a = Math.sqrt(n);
+  if (Math.floor(a)) {
   }
+  console.log(a);
+  return Math.sqrt(n) % 1 != 0 ? true : false;
+};
 
-  if (upperCaseNumber > lowerCaseNumber) {
-    return s.toUpperCase();
-  } else {
-    return s.toLowerCase();
-  }
-}
-
-console.log(solve("CODe"), "CODE");
+console.log(isSquare(3));
