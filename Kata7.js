@@ -877,17 +877,38 @@
 // }
 // console.log(addBinary(1, 5));
 
-function calculateYears(principal, interest, tax, desired) {
-  let i = 0;
-  while (principal < desired) {
-    total_interest = principal * interest;
-    interest_tax = total_interest * tax;
-    principal = principal + (total_interest - interest_tax);
-    console.log(interest_tax);
-    i++;
-  }
+// function calculateYears(principal, interest, tax, desired) {
+//   let i = 0;
+//   while (principal < desired) {
+//     total_interest = principal * interest;
+//     interest_tax = total_interest * tax;
+//     principal = principal + (total_interest - interest_tax);
+//     i++;
+//   }
 
-  return i;
+//   return i;
+// }
+
+// console.log(calculateYears(1000, 0.05, 0.18, 1100));
+
+// function findShort(s) {
+//   let finalWord = s.split(" ").sort((a, b) => a.length - b.length);
+//   return finalWord[0].length;
+// }
+
+// console.log((findShort("bitcoin take over the world"), 3));
+
+function findShort(s) {
+  let sArr = s.split(" ");
+  let smalest = sArr[0];
+  for (let i = 0; i < sArr.length; i++) {
+    const element = sArr[i];
+    console.log(element);
+    if (element.length < smalest.length) {
+      smalest = element;
+    }
+  }
+  console.log(smalest);
 }
 
-console.log(calculateYears(1000, 0.05, 0.18, 1000));
+console.log((findShort("bitcoin take over the world"), 3));
