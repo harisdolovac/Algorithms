@@ -898,17 +898,36 @@
 
 // console.log((findShort("bitcoin take over the world"), 3));
 
-function findShort(s) {
-  let sArr = s.split(" ");
-  let smalest = sArr[0];
-  for (let i = 0; i < sArr.length; i++) {
-    const element = sArr[i];
-    console.log(element);
-    if (element.length < smalest.length) {
-      smalest = element;
-    }
-  }
-  console.log(smalest);
-}
+// function findShort(s) {
+//   let sArr = s.split(" ");
+//   let smalest = sArr[0];
+//   for (let i = 0; i < sArr.length; i++) {
+//     const element = sArr[i];
+//     console.log(element);
+//     if (element.length < smalest.length) {
+//       smalest = element;
+//     }
+//   }
+//   console.log(smalest);
+// }
 
-console.log((findShort("bitcoin take over the world"), 3));
+// console.log((findShort("bitcoin take over the world"), 3));
+
+// function toJadenCase(s) {
+//   const words = s.split(" ");
+//   let finalWords = "";
+//   for (let i = 0; i < words.length; i++) {
+//     let element = words[i];
+//     finalWords +=" "+ element[0].toUpperCase() +  element.slice(1)
+//   }
+//   return finalWords.slice(1)
+// }
+// console.log(toJadenCase("How can mirrors"));
+
+function toJadenCase(s) {
+  const words = s.split(" ");
+
+  let final = words.map((item) => item[0].toUpperCase() + item.slice(1));
+  return final.join(" ");
+}
+console.log(toJadenCase("How can mirrors"));
