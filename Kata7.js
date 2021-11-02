@@ -961,13 +961,62 @@
 
 // console.log(isSquare(3));
 
-function median(array) {
-  if (array.length % 2 === 0) {
-    let a = array.sort((a, b) => a - b);
-    let middleNum = a.length / 2;
-    console.log(middleNum);
-    return (a[middleNum] + a[middleNum - 1]) / 2;
-  }
-}
+// function median(array) {
+//   let a = array.sort((a, b) => a - b);
+//   let middleNum = a.length / 2;
+//   if (array.length % 2 === 0) {
+//     return (a[middleNum] + a[middleNum - 1]) / 2;
+//   }
+//   return a[Math.floor(middleNum)]
+// }
 
-console.log(median([83, 275, 590]), 2);
+// console.log(median([83, 275, 590]), 2);
+
+// function diffBig2(arr) {
+
+//   for (let i = 0; i < arr.length; i++) {
+
+//    for (let j = 0; j < i; j++) {
+//      if (arr[i]>arr[j]) {
+//        let element = arr[i];
+//        arr[i] =arr[j]
+//        arr[j]=element
+//      }
+
+//    }
+//   }
+//   console.log(arr);
+//   return arr[0]-arr[1]
+// }
+
+// console.log(diffBig2([2,8, 3, 1]), 5);
+
+// function nthChar(words){
+//   let finalWord=""
+//   for (let i = 0; i < words.length; i++) {
+//     const element = words[i];
+//     finalWord +=element[i]
+//   }
+//   return finalWord
+//  }
+
+//  console.log(nthChar(['yoda', 'best', 'has']), 'yes');
+
+//These are your super secret characters you will use to make the password super secure
+
+var number = function (busStops) {
+  let final = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    const element = busStops[i];
+    final += element[0] - element[1];
+  }
+  return final;
+};
+
+console.log(
+  number([
+    [10, 0],
+    [3, 5],
+    [5, 8],
+  ])
+);
