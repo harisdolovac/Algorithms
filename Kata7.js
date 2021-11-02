@@ -1004,19 +1004,45 @@
 
 //These are your super secret characters you will use to make the password super secure
 
-var number = function (busStops) {
-  let final = 0;
-  for (let i = 0; i < busStops.length; i++) {
-    const element = busStops[i];
-    final += element[0] - element[1];
-  }
-  return final;
-};
+// var number = function (busStops) {
+//   let final = 0;
+//   for (let i = 0; i < busStops.length; i++) {
+//     const element = busStops[i];
+//     final += element[0] - element[1];
+//   }
+//   return final;
+// };
 
+// console.log(
+//   number([
+//     [10, 0],
+//     [3, 5],
+//     [5, 8],
+//   ])
+// );
+
+function alan(x) {
+  let contains = [
+    "Rejection",
+    "Disappointment",
+    "Backstabbing Central",
+    "Shattered Dreams Parkway",
+  ];
+
+  let final = contains.every((item) => x.includes(item));
+
+  return final
+    ? "Smell my cheese you mother!"
+    : "No, seriously, run. You will miss it. ";
+}
 console.log(
-  number([
-    [10, 0],
-    [3, 5],
-    [5, 8],
+  alan([
+    "Rejection",
+    "Disappointment",
+    "Backstabbing Central",
+    "Exeter",
+    "Shattered Dreams Parkway",
+    "Belgium",
+    "London",
   ])
 );
