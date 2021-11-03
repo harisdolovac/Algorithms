@@ -1021,28 +1021,61 @@
 //   ])
 // );
 
-function alan(x) {
-  let contains = [
-    "Rejection",
-    "Disappointment",
-    "Backstabbing Central",
-    "Shattered Dreams Parkway",
-  ];
+// function alan(x) {
+//   let contains = [
+//     "Rejection",
+//     "Disappointment",
+//     "Backstabbing Central",
+//     "Shattered Dreams Parkway",
+//   ];
 
-  let final = contains.every((item) => x.includes(item));
+//   let final = contains.every((item) => x.includes(item));
 
-  return final
-    ? "Smell my cheese you mother!"
-    : "No, seriously, run. You will miss it. ";
+//   return final
+//     ? "Smell my cheese you mother!"
+//     : "No, seriously, run. You will miss it. ";
+// }
+// console.log(
+//   alan([
+//     "Rejection",
+//     "Disappointment",
+//     "Backstabbing Central",
+//     "Exeter",
+//     "Shattered Dreams Parkway",
+//     "Belgium",
+//     "London",
+//   ])
+// );
+
+// function oddOrEven(array) {
+// if (array.length ===0) {
+//   return "even"
+// }
+//    let final= array.reduce((sum, item) => sum + item);
+
+//    return final %2 === 0?"even":"odd"
+// }
+
+// console.log(oddOrEven([]));
+
+// function filter_list(l) {
+//   return l.filter(item=>Number(item)>-1&& item!==item.toString());
+// }
+
+// console.log(filter_list([1, "a", "123", 0, 15]));
+
+function bump(x) {
+  let sumN = 0;
+  let sumUnderscore = 0;
+  for (let i = 0; i < x.length; i++) {
+    const element = x[i];
+    if (element === "n") {
+      sumN++;
+    } else {
+      sumUnderscore++;
+    }
+  }
+  return sumN > 15 ? "Car Dead" : "Woohoo!";
 }
-console.log(
-  alan([
-    "Rejection",
-    "Disappointment",
-    "Backstabbing Central",
-    "Exeter",
-    "Shattered Dreams Parkway",
-    "Belgium",
-    "London",
-  ])
-);
+
+console.log(bump("______nn__nn_nnn"));
