@@ -1064,18 +1064,24 @@
 
 // console.log(filter_list([1, "a", "123", 0, 15]));
 
-function bump(x) {
-  let sumN = 0;
-  let sumUnderscore = 0;
-  for (let i = 0; i < x.length; i++) {
-    const element = x[i];
-    if (element === "n") {
-      sumN++;
-    } else {
-      sumUnderscore++;
-    }
-  }
-  return sumN > 15 ? "Car Dead" : "Woohoo!";
-}
+// function bump(x) {
+//   let sumN = 0;
+//   let sumUnderscore = 0;
+//   for (let i = 0; i < x.length; i++) {
+//     const element = x[i];
+//     if (element === "n") {
+//       sumN++;
+//     } else {
+//       sumUnderscore++;
+//     }
+//   }
+//   return sumN > 15 ? "Car Dead" : "Woohoo!";
+// }
 
-console.log(bump("______nn__nn_nnn"));
+// console.log(bump("______nn__nn_nnn"));
+
+var FilterString = function (value) {
+  return +[...value].filter((item) => !isNaN(item)).join("");
+};
+
+console.log(FilterString("aa1bb2cc03dd"), 123);
