@@ -1109,18 +1109,26 @@
 // }
 // console.log(makeString("sees eyes xray yoat"), "sexy");
 
-function sc(screws) {
-  let totalTime = 1;
+// function sc(screws) {
+//   let totalTime = 1;
 
-  for (let i = 0; i < screws.length - 1; i++) {
-    const element = screws[i];
-    if (screws[i] === screws[i + 1]) {
-      totalTime += 2;
-    } else {
-      totalTime += 7;
-    }
-  }
-  return totalTime;
+//   for (let i = 0; i < screws.length - 1; i++) {
+//     const element = screws[i];
+//     if (screws[i] === screws[i + 1]) {
+//       totalTime += 2;
+//     } else {
+//       totalTime += 7;
+//     }
+//   }
+//   return totalTime;
+// }
+
+// console.log(sc("-+-+-----------"), 49);
+
+function solve(nums, div) {
+  return nums.map((item) => item + (item % div));
 }
 
-console.log(sc("-+-+-----------"), 7);
+console.log(
+  (solve([2, 7, 5, 9, 100, 34, 32, 0], 3), [4, 8, 7, 9, 101, 35, 34, 0])
+);
