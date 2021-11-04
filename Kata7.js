@@ -1080,8 +1080,20 @@
 
 // console.log(bump("______nn__nn_nnn"));
 
-var FilterString = function (value) {
-  return +[...value].filter((item) => !isNaN(item)).join("");
-};
+// var FilterString = function (value) {
+//   return +[...value].filter((item) => !isNaN(item)).join("");
+// };
 
-console.log(FilterString("aa1bb2cc03dd"), 123);
+// console.log(FilterString("aa1bb2cc03dd"), 123);
+
+function makeString(s) {
+  let finalString = "";
+  let stringArr = s.split(" ");
+  for (let i = 0; i < stringArr.length; i++) {
+    const element = stringArr[i];
+    finalString += element[0];
+  }
+  return finalString;
+}
+
+console.log(makeString("sees eyes xray yoat"), "sexy");
