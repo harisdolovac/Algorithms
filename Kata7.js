@@ -1086,14 +1086,41 @@
 
 // console.log(FilterString("aa1bb2cc03dd"), 123);
 
-function makeString(s) {
-  let finalString = "";
-  let stringArr = s.split(" ");
-  for (let i = 0; i < stringArr.length; i++) {
-    const element = stringArr[i];
-    finalString += element[0];
+// function makeString(s) {
+//   let finalString = "";
+//   let stringArr =s.split(" ");
+//   for (let i = 0; i < stringArr.length; i++) {
+//     const element = stringArr[i];
+//     finalString +=element[0]
+//   }
+//   return finalString
+// }
+
+//console.log(makeString("sees eyes xray yoat"), "sexy");
+
+// function makeString(s) {
+//   let finalString = "";
+//   for (let i = 0; i < s.length; i++) {
+//     if (s[i] === " ") {
+//       finalString += s[i + 1];
+//     }
+//   }
+//   return s[0] + finalString;
+// }
+// console.log(makeString("sees eyes xray yoat"), "sexy");
+
+function sc(screws) {
+  let totalTime = 1;
+
+  for (let i = 0; i < screws.length - 1; i++) {
+    const element = screws[i];
+    if (screws[i] === screws[i + 1]) {
+      totalTime += 2;
+    } else {
+      totalTime += 7;
+    }
   }
-  return finalString;
+  return totalTime;
 }
 
-console.log(makeString("sees eyes xray yoat"), "sexy");
+console.log(sc("-+-+-----------"), 7);
