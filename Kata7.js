@@ -1159,23 +1159,29 @@
 //   "alpha beta gamma delta"
 // );
 
-function XO(str) {
-  let x = 0;
-  let o = 0;
+// function XO(str) {
+//   let x = 0;
+//   let o = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    const element = str[i];
-    if (element == "x" || element == "X") {
-      x += 1;
-    } else if (element == "o" || element == "O") {
-      o += 1;
-    }
-  }
-  return x == o;
-}
+//   for (let i = 0; i < str.length; i++) {
+//     const element = str[i];
+//     if (element == "x" || element == "X") {
+//       x += 1;
+//     } else if (element == "o" || element == "O") {
+//       o += 1;
+//     }
+//   }
+//   return x == o;
+// }
 
-console.log(XO("zzzoo"), true);
-console.log(XO("xxOo"), true);
-console.log(XO("xxxm"), false);
-console.log(XO("Oo"), false);
-console.log(XO("ooom"), false);
+// console.log(XO("zzzoo"), true);
+// console.log(XO("xxOo"), true);
+// console.log(XO("xxxm"), false);
+// console.log(XO("Oo"), false);
+// console.log(XO("ooom"), false);
+
+// function longest(s1, s2) {
+//   return [...new Set(s1 + s2)].sort().join("");
+// }
+
+// console.log(longest("aretheyhere", "yestheyarehere"), "aehrsty");
