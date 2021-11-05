@@ -1125,10 +1125,38 @@
 
 // console.log(sc("-+-+-----------"), 49);
 
-function solve(nums, div) {
-  return nums.map((item) => item + (item % div));
+// function solve(nums, div) {
+//   return nums.map((item) => item + (item % div));
+// }
+
+// console.log(
+//   (solve([2, 7, 5, 9, 100, 34, 32, 0], 3), [4, 8, 7, 9, 101, 35, 34, 0])
+// );
+// function getEvenNumbers(numbersArray){
+//   return numbersArray.filter((item)=>item %2===0)
+// }
+
+function removeDuplicateWords(s) {
+  //   let sArr = s.split(" ")
+  // return [...new Set(sArr)].join(" ")
+
+  // let sArr = s.split(" ");
+  // let final = [];
+  // for (let i = 0; i < sArr.length; i++) {
+  //   const element = sArr[i];
+  //   if (!final.includes(element)) {
+  //     final.push(element)
+  //   }
+  // }
+  // return final.join(" ")
+
+  let sArr = s.split(" ");
+  return sArr.filter((item) => item !== item).join(" ");
 }
 
 console.log(
-  (solve([2, 7, 5, 9, 100, 34, 32, 0], 3), [4, 8, 7, 9, 101, 35, 34, 0])
+  removeDuplicateWords(
+    "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+  ),
+  "alpha beta gamma delta"
 );
