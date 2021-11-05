@@ -1136,27 +1136,46 @@
 //   return numbersArray.filter((item)=>item %2===0)
 // }
 
-function removeDuplicateWords(s) {
-  //   let sArr = s.split(" ")
-  // return [...new Set(sArr)].join(" ")
+// function removeDuplicateWords(s) {
+//   //   let sArr = s.split(" ")
+//   // return [...new Set(sArr)].join(" ")
 
-  // let sArr = s.split(" ");
-  // let final = [];
-  // for (let i = 0; i < sArr.length; i++) {
-  //   const element = sArr[i];
-  //   if (!final.includes(element)) {
-  //     final.push(element)
-  //   }
-  // }
-  // return final.join(" ")
+//   // let sArr = s.split(" ");
+//   // let final = [];
+//   // for (let i = 0; i < sArr.length; i++) {
+//   //   const element = sArr[i];
+//   //   if (!final.includes(element)) {
+//   //     final.push(element)
+//   //   }
+//   // }
+//   // return final.join(" ")
 
-  let sArr = s.split(" ");
-  return sArr.filter((item) => item !== item).join(" ");
+// }
+
+// console.log(
+//   removeDuplicateWords(
+//     "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+//   ),
+//   "alpha beta gamma delta"
+// );
+
+function XO(str) {
+  let x = 0;
+  let o = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    const element = str[i];
+    if (element == "x" || element == "X") {
+      x += 1;
+    } else if (element == "o" || element == "O") {
+      o += 1;
+    }
+  }
+  return x == o;
 }
 
-console.log(
-  removeDuplicateWords(
-    "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
-  ),
-  "alpha beta gamma delta"
-);
+console.log(XO("zzzoo"), true);
+console.log(XO("xxOo"), true);
+console.log(XO("xxxm"), false);
+console.log(XO("Oo"), false);
+console.log(XO("ooom"), false);
