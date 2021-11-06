@@ -1185,3 +1185,35 @@
 // }
 
 // console.log(longest("aretheyhere", "yestheyarehere"), "aehrsty");
+
+// function stray(numbers) {
+
+//   if (numbers[0] !== numbers[1] &&numbers[0] !== numbers[2] ) {
+//     return numbers[0]
+//   }
+
+//     for (let i = 0; i < numbers.length; i++) {
+
+//   let first = numbers[0]
+//       if (first !== numbers[i] ) {
+//         return numbers[i]
+//       }
+//     }
+
+// }
+
+// console.log(stray([17,-1654, 17, 17, 17, 17, 17,]), 2);
+
+const dontGiveMeFive = (start, end) => {
+  let fullArr = [];
+  for (let i = start; i <= end; i++) {
+    fullArr.push(i);
+  }
+  const stringArr = fullArr.map((item) => item.toString());
+
+  let arrWithOutFive = stringArr.filter((item) => !item == item.includes("5"));
+
+  return arrWithOutFive.length;
+};
+
+console.log(dontGiveMeFive(10, 19));
