@@ -1204,16 +1204,16 @@
 
 // console.log(stray([17,-1654, 17, 17, 17, 17, 17,]), 2);
 
-const dontGiveMeFive = (start, end) => {
-  let fullArr = [];
-  for (let i = start; i <= end; i++) {
-    fullArr.push(i);
-  }
-  const stringArr = fullArr.map((item) => item.toString());
+// const dontGiveMeFive = (start, end) => {
+//   let fullArr = [];
+//   for (let i = start; i <= end; i++) {
+//     fullArr.push(i);
+//   }
+//   const stringArr = fullArr.map((item) => item.toString());
 
-  let arrWithOutFive = stringArr.filter((item) => !item == item.includes("5"));
+//   let arrWithOutFive = stringArr.filter((item) => !item == item.includes("5"));
 
-  return arrWithOutFive.length;
-};
+//   return arrWithOutFive.length;
+// };
 
-console.log(dontGiveMeFive(10, 19));
+// console.log(dontGiveMeFive(10, 19));
