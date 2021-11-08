@@ -87,18 +87,33 @@
 
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
-function findUniq(arr) {
-  if (arr[0] !== arr[1] && arr[0] !== arr[2]) {
-    return arr[0];
-  }
+// function findUniq(arr) {
+//   if (arr[0] !== arr[1] && arr[0] !== arr[2]) {
+//     return arr[0];
+//   }
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      const element = arr[j];
-      if (arr[i] !== arr[j]) {
-        return arr[[j]];
-      }
-    }
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       const element = arr[j];
+//       if (arr[i] !== arr[j]) {
+//         return arr[[j]];
+//       }
+//     }
+//   }
+// }
+// console.log(findUniq([1, 0, 0, 0, 0, 0, 0]), 1);
+
+function narcissistic(value) {
+  // Code me to return true or false
+  let compare = 0;
+  let strValue = "" + value;
+  let val = strValue.split("").map(Number);
+  for (let i = 0; i < val.length; i++) {
+    console.log(val.length);
+    const element = val[i];
+    compare += Math.pow(element, val.length);
   }
+  return compare == value;
 }
-console.log(findUniq([1, 0, 0, 0, 0, 0, 0]), 1);
+
+console.log(narcissistic(1652));
