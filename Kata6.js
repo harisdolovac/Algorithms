@@ -78,17 +78,27 @@
 
 // console.log(arrayDiff([1, 2, 2, 2, 3,4], [2,3]));
 
-function findOdd(A) {
-  //   let obj = {};
+// function createPhoneNumber(numbers){
+//   let first = numbers.slice(0,3).join("")
+//   let secound = numbers.slice(3,6).join("")
+//   let third = numbers.slice(6).join("")
+//   return `(${first}) ${secound}-${third}`
+// }
 
-  //   for (let i = 0; i < A.length; i++) {
-  //     const element = A[i];
-  //     obj[i] = element;
-  //   }
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
-  console.log("A");
+function findUniq(arr) {
+  if (arr[0] !== arr[1] && arr[0] !== arr[2]) {
+    return arr[0];
+  }
 
-  //   console.log(obj);
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      const element = arr[j];
+      if (arr[i] !== arr[j]) {
+        return arr[[j]];
+      }
+    }
+  }
 }
-
-console.log([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5], -1);
+console.log(findUniq([1, 0, 0, 0, 0, 0, 0]), 1);
