@@ -1217,3 +1217,22 @@
 // };
 
 // console.log(dontGiveMeFive(10, 19));
+
+// function minMax(arr){
+//   let finalArr = arr.sort((a,b)=>a-b)
+//   return ([finalArr[0],finalArr[finalArr.length-1]])
+// }
+
+// console.log(minMax([-516338,5115514554,-240234,445559]));
+
+function isIsogram(str) {
+  //...
+  let a = str.toUpperCase();
+
+  let b = [...new Set(a)];
+  console.log(b.length);
+  console.log(a.length);
+  return a === b;
+}
+
+console.log(isIsogram("Dermatoglyphics"), true);
