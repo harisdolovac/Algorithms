@@ -1225,14 +1225,59 @@
 
 // console.log(minMax([-516338,5115514554,-240234,445559]));
 
-function isIsogram(str) {
-  //...
-  let a = str.toUpperCase();
+// function isIsogram(str) {
+//   let a = str.toUpperCase();
+//   let b = [...new Set(a)];
+//   return a === b;
+// }
 
-  let b = [...new Set(a)];
-  console.log(b.length);
-  console.log(a.length);
-  return a === b;
+// function isIsogram(str) {
+//     let a = str.toUpperCase();
+//     for (let i = 0; i < str.length; i++) {
+
+//         for (let j = 1; j < str.length; j++) {
+//             if (str[i]===str[j]) {
+//                 return false
+//             }
+
+//         }
+//     }
+//     return true
+//   }
+
+// console.log(isIsogram("aaaa"), true);
+
+// function validateWord(s)
+// {
+//   let finalObj={}
+//   let arr =[]
+
+//   for (let i = 0; i < s.length-1; i++) {
+//      if (s[i]==s[i+1]) {
+//          arr.push(s[i])
+//      }
+//   }
+//     console.log(arr);
+//   return finalObj
+// }
+
+// console.log(validateWord("abcabc"));
+
+function mergeArrays(a, b) {
+  let finalArr = [];
+  let lengthA = a.length;
+  let lengthB = b.length;
+  let c = lengthB;
+  if (lengthA > lengthB) {
+    c = lengthA;
+  }
+
+  console.log(c);
+  for (let i = 0; i < c; i++) {
+    const element = a[i];
+    finalArr.push(element, b[i]);
+  }
+  return finalArr.filter((item) => item !== undefined);
 }
 
-console.log(isIsogram("Dermatoglyphics"), true);
+console.log(mergeArrays([1, 2, 3], ["a", "b", "c", "d", "e"]));
