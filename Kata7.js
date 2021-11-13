@@ -1263,21 +1263,32 @@
 
 // console.log(validateWord("abcabc"));
 
-function mergeArrays(a, b) {
-  let finalArr = [];
-  let lengthA = a.length;
-  let lengthB = b.length;
-  let c = lengthB;
-  if (lengthA > lengthB) {
-    c = lengthA;
-  }
+// function mergeArrays(a, b) {
+//   let finalArr = [];
+//   let lengthA = a.length;
+//   let lengthB = b.length;
+//   let c = lengthB;
+//   if (lengthA > lengthB) {
+//     c = lengthA;
+//   }
 
-  console.log(c);
-  for (let i = 0; i < c; i++) {
-    const element = a[i];
-    finalArr.push(element, b[i]);
-  }
-  return finalArr.filter((item) => item !== undefined);
-}
+//   console.log(c);
+//   for (let i = 0; i < c; i++) {
+//     const element = a[i];
+//     finalArr.push(element, b[i]);
+//   }
+//   return finalArr.filter((item) => item !== undefined);
+// }
 
-console.log(mergeArrays([1, 2, 3], ["a", "b", "c", "d", "e"]));
+// console.log(mergeArrays([1, 2, 3], ["a", "b", "c", "d", "e"]));
+
+var isMonotone = function (arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(isMonotone([1, 2, 3, 3, 4, 5]));
