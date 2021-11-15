@@ -1318,14 +1318,30 @@
 
 // console.log(removeVowels("aeiousss"), "");
 
-var maxRedigit = function (num) {
-  let b = num
-    .toString()
-    .split("")
-    .sort((a, b) => b - a)
-    .map(Number)
-    .join("");
-  return b.length == 3 ? Number(b) : null;
+// var maxRedigit = function (num) {
+//   let b = num
+//     .toString()
+//     .split("")
+//     .sort((a, b) => b - a)
+//     .map(Number)
+//     .join("");
+//   return b.length == 3 ? Number(b) : null;
+// };
+
+// console.log(maxRedigit(123), 321);
+
+const divisions = (n, divisor) => {
+  let i = 0;
+  while (n >= divisor) {
+    i += 1;
+    n = n / divisor;
+  }
+  return i;
 };
 
-console.log(maxRedigit(123), 321);
+console.log(divisions(6, 2), 2);
+console.log(divisions(100, 2), 6);
+console.log(divisions(2450, 5), 4);
+console.log(divisions(9999, 3), 8);
+console.log(divisions(2, 3), 0);
+console.log(divisions(5, 5), 1);
