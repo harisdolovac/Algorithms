@@ -1306,14 +1306,26 @@
 
 // console.log(sake(1,3));
 
-var removeVowels = function (str) {
-  //code here
-  let vowels = ["a", "e", "i", "o", "u"];
+// var removeVowels = function (str) {
+//   //code here
+//   let vowels = ["a", "e", "i", "o", "u"];
 
-  return str
+//   return str
+//     .split("")
+//     .filter((item) => !vowels.includes(item))
+//     .join("");
+// };
+
+// console.log(removeVowels("aeiousss"), "");
+
+var maxRedigit = function (num) {
+  let b = num
+    .toString()
     .split("")
-    .filter((item) => !vowels.includes(item))
+    .sort((a, b) => b - a)
+    .map(Number)
     .join("");
+  return b.length == 3 ? Number(b) : null;
 };
 
-console.log(removeVowels("aeiousss"), "");
+console.log(maxRedigit(123), 321);
