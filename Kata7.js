@@ -1282,13 +1282,38 @@
 
 // console.log(mergeArrays([1, 2, 3], ["a", "b", "c", "d", "e"]));
 
-var isMonotone = function (arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] > arr[i + 1]) {
-      return false;
-    }
-  }
-  return true;
+// var isMonotone = function (arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(isMonotone([1, 2, 3, 3, 4, 5]));
+
+// const sake =(...numbers)=>{
+//   console.log(numbers);
+// for (let i = 0; i < numbers.length; i++) {
+//   const element = numbers[i];
+//   if (element !==Number(element)) {
+//     return false
+//   }
+// }
+// return true
+// }
+
+// console.log(sake(1,3));
+
+var removeVowels = function (str) {
+  //code here
+  let vowels = ["a", "e", "i", "o", "u"];
+
+  return str
+    .split("")
+    .filter((item) => !vowels.includes(item))
+    .join("");
 };
 
-console.log(isMonotone([1, 2, 3, 3, 4, 5]));
+console.log(removeVowels("aeiousss"), "");
