@@ -1330,18 +1330,42 @@
 
 // console.log(maxRedigit(123), 321);
 
-const divisions = (n, divisor) => {
-  let i = 0;
-  while (n >= divisor) {
-    i += 1;
-    n = n / divisor;
-  }
-  return i;
-};
+// const divisions = (n, divisor) => {
+//   let i = 0;
+//   while (n >= divisor) {
+//     i += 1;
+//     n = n / divisor;
+//   }
+//   return i;
+// };
 
-console.log(divisions(6, 2), 2);
-console.log(divisions(100, 2), 6);
-console.log(divisions(2450, 5), 4);
-console.log(divisions(9999, 3), 8);
-console.log(divisions(2, 3), 0);
-console.log(divisions(5, 5), 1);
+// console.log(divisions(6, 2), 2);
+// console.log(divisions(100, 2), 6);
+
+// function save(sizes, hd) {
+
+//   let count =0
+//   let final =0
+
+//   for (let i = 0; i < sizes.length; i++) {
+//     const element = sizes[i];
+//     count +=element
+//     if (count <=hd) {
+//       final++
+//     }
+//   }
+//   return final
+// }
+
+// console.log(save([4, 4, 4, 3, 3], 12));
+
+function generateIntegers(m, n) {
+  finalArr = [];
+
+  for (let i = m; i <= n; i++) {
+    finalArr.push(i);
+  }
+  return finalArr;
+}
+
+console.log(generateIntegers(2, 5), [2, 3, 4, 5]);
