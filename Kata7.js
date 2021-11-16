@@ -1370,10 +1370,33 @@
 
 // console.log(generateIntegers(2, 5), [2, 3, 4, 5]);
 
+// function flattenAndSort(array) {
+//   return [].concat(...array).sort((a,b)=>a-b
+// }
 
+// console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]), [1, 2, 3, 4, 5, 6, 100]);
 
-function flattenAndSort(array) {
-  return [].concat(...array).sort((a,b)=>a-b
+// function onesComplement(n) {
+//   let complementNumber = ""
+//   for (let i = 0; i < n.length; i++) {
+//     if (n[i] ==="1") {
+//       complementNumber +="0"
+//     }else{
+//       complementNumber +="1"
+//     }
+//   }
+//   return complementNumber
+// };
+
+// console.log(onesComplement("1101"), "0010");
+
+function BinaryPyramid(m, n) {
+  let sum = 0;
+  for (let i = m; i <= n; i++) {
+    sum += parseFloat(i.toString(2));
+  }
+
+  return sum.toString(2);
 }
 
-console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]), [1, 2, 3, 4, 5, 6, 100]);
+console.log(BinaryPyramid(1, 4), "1111010");
