@@ -1400,19 +1400,36 @@
 
 // console.log(BinaryPyramid(1, 4), "1111010");
 
-function incrementer(nums) {
-  let finalArr = [];
-  for (let i = 0; i < nums.length; i++) {
-    const element = nums[i];
-    finalArr.push(element + (i + 1));
-    if (finalArr[i] > 9) {
-      finalArr[i] %= 10;
-    }
-  }
-  return finalArr;
-}
+// function incrementer(nums) {
+//   let finalArr = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     const element = nums[i];
+//     finalArr.push(element + (i + 1));
+//     if (finalArr[i] > 9) {
+//       finalArr[i] %= 10;
+//     }
+//   }
+//   return finalArr;
+// }
 
-console.log(
-  incrementer([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 8]),
-  [2, 4, 6, 8, 0, 2, 4, 6, 8, 9, 0, 1, 2, 2]
-);
+// console.log(
+//   incrementer([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 8]),
+//   [2, 4, 6, 8, 0, 2, 4, 6, 8, 9, 0, 1, 2, 2]
+// );
+
+// function missingNo(nums) {
+//   nums.sort((a, b) => a - b);
+//   for (let i = 0; i < nums.length; i++) {
+//     if (i !== nums[i]) return i;
+//   }
+// }
+
+// let arr1 = [
+//   9, 45, 53, 10, 100, 30, 85, 72, 69, 93, 98, 27, 73, 82, 91, 60, 5, 79, 88, 18,
+//   71, 36, 44, 22, 89, 40, 59, 80, 81, 67, 25, 54, 13, 64, 56, 39, 48, 92, 84,
+//   94, 87, 90, 77, 63, 32, 68, 37, 96, 23, 0, 95, 1, 52, 78, 6, 57, 50, 2, 46,
+//   19, 76, 47, 14, 4, 3, 29, 17, 11, 21, 24, 74, 65, 12, 83, 28, 41, 66, 7, 58,
+//   55, 51, 43, 97, 42, 86, 49, 31, 20, 75, 70, 34, 33, 38, 8, 15, 62, 35, 61, 99,
+//   16,
+// ]; // 26
+// console.log(missingNo(arr1), 26);
