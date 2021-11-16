@@ -1359,13 +1359,21 @@
 
 // console.log(save([4, 4, 4, 3, 3], 12));
 
-function generateIntegers(m, n) {
-  finalArr = [];
+// function generateIntegers(m, n) {
+//   finalArr = [];
 
-  for (let i = m; i <= n; i++) {
-    finalArr.push(i);
-  }
-  return finalArr;
+//   for (let i = m; i <= n; i++) {
+//     finalArr.push(i);
+//   }
+//   return finalArr;
+// }
+
+// console.log(generateIntegers(2, 5), [2, 3, 4, 5]);
+
+
+
+function flattenAndSort(array) {
+  return [].concat(...array).sort((a,b)=>a-b
 }
 
-console.log(generateIntegers(2, 5), [2, 3, 4, 5]);
+console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]), [1, 2, 3, 4, 5, 6, 100]);
