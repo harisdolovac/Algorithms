@@ -1390,13 +1390,29 @@
 
 // console.log(onesComplement("1101"), "0010");
 
-function BinaryPyramid(m, n) {
-  let sum = 0;
-  for (let i = m; i <= n; i++) {
-    sum += parseFloat(i.toString(2));
-  }
+// function BinaryPyramid(m, n) {
+//   let sum = 0;
+//   for (let i = m; i <= n; i++) {
+//     sum += parseFloat(i.toString(2));
+//   }
+//   return sum.toString(2);
+// }
 
-  return sum.toString(2);
+// console.log(BinaryPyramid(1, 4), "1111010");
+
+function incrementer(nums) {
+  let finalArr = [];
+  for (let i = 0; i < nums.length; i++) {
+    const element = nums[i];
+    finalArr.push(element + (i + 1));
+    if (finalArr[i] > 9) {
+      finalArr[i] %= 10;
+    }
+  }
+  return finalArr;
 }
 
-console.log(BinaryPyramid(1, 4), "1111010");
+console.log(
+  incrementer([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 8]),
+  [2, 4, 6, 8, 0, 2, 4, 6, 8, 9, 0, 1, 2, 2]
+);
