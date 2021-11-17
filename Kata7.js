@@ -1433,3 +1433,33 @@
 //   16,
 // ]; // 26
 // console.log(missingNo(arr1), 26);
+
+// var isSquare = function (arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     if (Math.sqrt(element) % 1 != 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(isSquare([1, 16]), true);
+
+function rowWeights(array) {
+  let finalArr = [];
+  let sumEven = 0;
+  let sumOdd = 0;
+  for (let i = 0; i < array.length; i++) {
+    let element = array[i];
+    if (i % 2 == 0) {
+      sumEven += element;
+    } else {
+      sumOdd += element;
+    }
+  }
+  finalArr.push(sumEven, sumOdd);
+  return finalArr;
+}
+
+console.log(rowWeights([50, 60, 70, 80]), [120, 140]);
