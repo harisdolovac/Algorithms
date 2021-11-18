@@ -1491,16 +1491,30 @@
 // console.log(evaporator(10, 10, 10), 22);
 
 function maskify(cc) {
-  let finalString = "";
-
-  let first = cc.slice(0, cc.length - 4).length;
-
-  if (cc.length > 3) {
-    finalString = "#".repeat(first) + cc.slice(-4);
-    return finalString;
-  }
-
-  return cc;
+  // let finalString = "";
+  // let first = cc.slice(0, cc.length - 4).length;
+  // if (cc.length > 3) {
+  //   finalString = "#".repeat(first) + cc.slice(-4);
+  //   return finalString;
+  // }
+  // return cc;
 }
 
-console.log(maskify("4556364607935616"), "############5616");
+// console.log(maskify("4556364607935616"), "############5616");
+
+function getSum(a, b) {
+  if (a > b) {
+    temp = a;
+    a = b;
+    b = temp;
+  }
+
+  let sum = 0;
+  for (let i = a; i <= b; i++) {
+    console.log(i);
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(getSum(0, -1), 2);
