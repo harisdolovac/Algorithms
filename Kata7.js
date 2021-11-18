@@ -1446,20 +1446,61 @@
 
 // console.log(isSquare([1, 16]), true);
 
-function rowWeights(array) {
-  let finalArr = [];
-  let sumEven = 0;
-  let sumOdd = 0;
-  for (let i = 0; i < array.length; i++) {
-    let element = array[i];
-    if (i % 2 == 0) {
-      sumEven += element;
-    } else {
-      sumOdd += element;
-    }
+// function rowWeights(array) {
+//   let finalArr = [];
+//   let sumEven = 0;
+//   let sumOdd = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     let element = array[i];
+//     if (i % 2 == 0) {
+//       sumEven += element;
+//     } else {
+//       sumOdd += element;
+//     }
+//   }
+//   finalArr.push(sumEven, sumOdd);
+//   return finalArr;
+// }
+
+// console.log(rowWeights([50, 60, 70, 80]), [120, 140]);
+
+// function inviteMoreWomen(L) {
+//   return L.reduce((sum, people) => sum + people > 0);
+// }
+
+// console.log(inviteMoreWomen([-1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1]), true);
+
+// function evaporator(content, evap_per_day, threshold) {
+//   //content - koliko ima ml
+//   //evapPerDay koliko gubi dnevno-u procentima//
+//   //threshold ostatak parfema koji ne moze da se koristi
+
+//   let days = 0;
+
+//   const thresholdPercentage = threshold / 100;
+//   const evaporatorPercentage = evap_per_day / 100;
+//   const reminder = thresholdPercentage * content;
+
+//   while (content >= reminder) {
+//     content -= evaporatorPercentage * content;
+//     days++;
+//   }
+//   return days;
+// }
+
+// console.log(evaporator(10, 10, 10), 22);
+
+function maskify(cc) {
+  let finalString = "";
+
+  let first = cc.slice(0, cc.length - 4).length;
+
+  if (cc.length > 3) {
+    finalString = "#".repeat(first) + cc.slice(-4);
+    return finalString;
   }
-  finalArr.push(sumEven, sumOdd);
-  return finalArr;
+
+  return cc;
 }
 
-console.log(rowWeights([50, 60, 70, 80]), [120, 140]);
+console.log(maskify("4556364607935616"), "############5616");
