@@ -1525,15 +1525,27 @@ function maskify(cc) {
 
 // console.log(solution('abcde', 'cde'), true);
 
-function arithmetic(a, b, operator) {
-  let operations = {
-    add: a + b,
-    subtract: a - b,
-    multiply: a * b,
-    divide: a / b,
-  };
+// function arithmetic(a, b, operator) {
+//   let operations = {
+//     add: a + b,
+//     subtract: a - b,
+//     multiply: a * b,
+//     divide: a / b,
+//   };
 
-  return operations[operator];
-}
+//   return operations[operator];
+// }
+// console.log(arithmetic(8, 2, "subtract"), 6);
 
-console.log(arithmetic(8, 2, "subtract"), 6);
+var gimme = function (inputArray) {
+  const middle = [...inputArray].sort((a, b) => a - b)[1];
+
+  for (let i = 0; i < inputArray.length; i++) {
+    const element = inputArray[i];
+    if (element == middle) {
+      return i;
+    }
+  }
+};
+
+console.log(gimme([2, 3, 1]), 0, "Finds the index of middle element");
