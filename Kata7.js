@@ -1556,16 +1556,37 @@ function maskify(cc) {
 
 // console.log(roundToNext5(7), 125);
 
-function findSum(n) {
-  let final = 0;
+// function findSum(n) {
+//   let final = 0;
+//   for (let i = 0; i <= n; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       final += i;
+//     }
+//   }
+//   return final;
+// }
 
-  for (let i = 0; i <= n; i++) {
-    if (i % 3 === 0 || i % 5 === 0) {
-      final += i;
-    }
+// console.log(findSum(10), 33);
+
+// function maxMultiple(divisor, bound) {
+//   for (let i = bound; i > 0; i--) {
+//     if (i % divisor == 0) {
+//       return i;
+//     }
+//   }
+// }
+
+// console.log(maxMultiple(2, 7), 6);
+
+function factorial(n) {
+  let sum = 1;
+
+  if (0 > n > 12) return "RangeError";
+
+  for (let i = n; i > 0; i--) {
+    sum *= i;
   }
-
-  return final;
+  return sum;
 }
 
-console.log(findSum(10), 33);
+console.log(factorial(3), 6, "factorial for 3 is 6");
