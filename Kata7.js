@@ -1537,15 +1537,35 @@ function maskify(cc) {
 // }
 // console.log(arithmetic(8, 2, "subtract"), 6);
 
-var gimme = function (inputArray) {
-  const middle = [...inputArray].sort((a, b) => a - b)[1];
+// var gimme = function (inputArray) {
+//   const middle = [...inputArray].sort((a, b) => a - b)[1];
 
-  for (let i = 0; i < inputArray.length; i++) {
-    const element = inputArray[i];
-    if (element == middle) {
-      return i;
+//   for (let i = 0; i < inputArray.length; i++) {
+//     const element = inputArray[i];
+//     if (element == middle) {
+//       return i;
+//     }
+//   }
+// };
+
+// console.log(gimme([2, 3, 1]), 0, "Finds the index of middle element");
+
+// function roundToNext5(n) {
+//   return Math.ceil(n / 5) * 5;
+// }
+
+// console.log(roundToNext5(7), 125);
+
+function findSum(n) {
+  let final = 0;
+
+  for (let i = 0; i <= n; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      final += i;
     }
   }
-};
 
-console.log(gimme([2, 3, 1]), 0, "Finds the index of middle element");
+  return final;
+}
+
+console.log(findSum(10), 33);
