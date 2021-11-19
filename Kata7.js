@@ -1502,19 +1502,38 @@ function maskify(cc) {
 
 // console.log(maskify("4556364607935616"), "############5616");
 
-function getSum(a, b) {
-  if (a > b) {
-    temp = a;
-    a = b;
-    b = temp;
-  }
+// function getSum(a, b) {
+//   if (a > b) {
+//     temp = a;
+//     a = b;
+//     b = temp;
+//   }
 
-  let sum = 0;
-  for (let i = a; i <= b; i++) {
-    console.log(i);
-    sum += i;
-  }
-  return sum;
+//   let sum = 0;
+//   for (let i = a; i <= b; i++) {
+//     console.log(i);
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(getSum(0, -1), 2);
+
+// function solution(str, ending){
+//   return str.endsWith(ending)
+// }
+
+// console.log(solution('abcde', 'cde'), true);
+
+function arithmetic(a, b, operator) {
+  let operations = {
+    add: a + b,
+    subtract: a - b,
+    multiply: a * b,
+    divide: a / b,
+  };
+
+  return operations[operator];
 }
 
-console.log(getSum(0, -1), 2);
+console.log(arithmetic(8, 2, "subtract"), 6);
