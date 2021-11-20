@@ -103,17 +103,26 @@
 // }
 // console.log(findUniq([1, 0, 0, 0, 0, 0, 0]), 1);
 
-function narcissistic(value) {
-  // Code me to return true or false
-  let compare = 0;
-  let strValue = "" + value;
-  let val = strValue.split("").map(Number);
-  for (let i = 0; i < val.length; i++) {
-    console.log(val.length);
-    const element = val[i];
-    compare += Math.pow(element, val.length);
-  }
-  return compare == value;
-}
+// function narcissistic(value) {
+//   // Code me to return true or false
+//   let compare = 0;
+//   let strValue = "" + value;
+//   let val = strValue.split("").map(Number);
+//   for (let i = 0; i < val.length; i++) {
+//     console.log(val.length);
+//     const element = val[i];
+//     compare += Math.pow(element, val.length);
+//   }
+//   return compare == value;
+// }
 
-console.log(narcissistic(1652));
+// console.log(narcissistic(1652));
+
+var countBits = function (n) {
+  return n
+    .toString(2)
+    .split("")
+    .reduce((sum, num) => sum + +num, 0);
+};
+
+console.log(countBits(10), 2);
