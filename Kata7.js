@@ -1578,15 +1578,33 @@ function maskify(cc) {
 
 // console.log(maxMultiple(2, 7), 6);
 
-function factorial(n) {
-  let sum = 1;
+// function factorial(n) {
+//   let sum = 1;
+//   if ( n > 12 || n<0) throw new Error('RangeError!')
+//   for (let i = n; i > 0; i--) {
+//     sum *= i;
+//   }
+//   return sum;
+// }
+// console.log(factorial(41), 6, "factorial for 3 is 6");
 
-  if (0 > n > 12) return "RangeError";
+// function reverseLetter(str) {
+//   return str
+//     .replace(/[^a-z]/gi, "")
+//     .split("")
+//     .reverse()
+//     .join("");
+// }
 
-  for (let i = n; i > 0; i--) {
-    sum *= i;
+// console.log(reverseLetter("ultr53o?n"), "nortlu");
+
+function sumDigits(number) {
+  let sum = 0;
+  let num = Math.abs(number).toString().split("");
+  for (let i = 0; i < num.length; i++) {
+    sum += +Math.abs(num[i]);
   }
   return sum;
 }
 
-console.log(factorial(3), 6, "factorial for 3 is 6");
+console.log(sumDigits(-32), 1);
