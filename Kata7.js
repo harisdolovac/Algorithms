@@ -1598,13 +1598,105 @@ function maskify(cc) {
 
 // console.log(reverseLetter("ultr53o?n"), "nortlu");
 
-function sumDigits(number) {
-  let sum = 0;
-  let num = Math.abs(number).toString().split("");
-  for (let i = 0; i < num.length; i++) {
-    sum += +Math.abs(num[i]);
-  }
-  return sum;
+// function sumDigits(number) {
+//   let sum = 0;
+// return Math.abs(number).toString().split("").map(Number).reduce((sum,item)=>sum+item)
+//   for (let i = 0; i < num.length; i++) {
+//     sum += +Math.abs(num[i]);
+//   }
+//   return sum;
+// }
+
+// console.log(sumDigits(-32), 5);
+
+function checkExam(array1, array2) {
+  // good luck
+  // let finalScore = array1.reduce((score, item, i) => {
+  //   if (item === array2[i]) {
+  //     score += 4;
+  //   } else if (array2[i] == "") {
+  //     score += 0;
+  //   } else if (item !== array2[i]) {
+  //     score -= 1;
+  //   }
+  //   return score
+  // }, 0);
+  // return finalScore<0?0:finalScore
+  //---------------------------------------2solution-------------------------
+  // let score = 0;
+  // for (let i = 0; i < array1.length; i++) {
+  //   const element = array1[i];
+  //   if (array1[i] === array2[i]) {
+  //     score += 4;
+  //   } else if (array2[i] == "") {
+  //     score += 0;
+  //   } else if (array1[i] !== array2[i]) {
+  //     score -= 1;
+  //   }
+  // }
+  // if (score < 1) {
+  //   return 0;
+  // }
+  // return score;
 }
 
-console.log(sumDigits(-32), 1);
+// console.log(checkExam(["c","a","b","c","b"], ["a", "c", "b", "",""]), 2);
+// console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]), 16);
+// console.log(checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]), 0);
+
+// function capitalize(s) {
+//   let word1 = "";
+//   let word2 = "";
+
+//   for (let i = 0; i < s.length; i++) {
+//     let element = s[i];
+//     if (i % 2 == 0) {
+//      element = element.toUpperCase();
+//     }
+
+//     word1 += element;
+//   }
+//   for (let i = 0; i < s.length; i++) {
+//     let element = s[i];
+//     if (i % 2 != 0) {
+//       element = element.toUpperCase();
+//     }
+
+//     word2 += element;
+//   }
+
+//   return [word1,word2]
+// }
+
+// console.log(capitalize("abcdef"), ["AbCdEf", "aBcDeF"]);
+
+// function minValue(values){
+//  return a = +[...new Set(values)].sort((a,b)=>a-b).join("")
+// }
+
+// console.log(minValue([4, 7, 5, 7]), 457);
+
+// function inAscOrder(arr) {
+//   let a = [...arr].sort((a, b) => a - b);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     if (arr[i] !== a[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(inAscOrder([1, 2, 4, 7, 19]));
+
+function removeUrlAnchor(url) {
+  let finalUrl = "";
+  let i = 0;
+  while (url[i] < "#") {
+    finalUrl += url[i];
+    i++;
+  }
+  return finalUrl;
+}
+console.log(removeUrlAnchor("www.codewars.com#about"), "www.codewars.com");
