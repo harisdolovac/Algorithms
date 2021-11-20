@@ -1609,36 +1609,36 @@ function maskify(cc) {
 
 // console.log(sumDigits(-32), 5);
 
-function checkExam(array1, array2) {
-  // good luck
-  // let finalScore = array1.reduce((score, item, i) => {
-  //   if (item === array2[i]) {
-  //     score += 4;
-  //   } else if (array2[i] == "") {
-  //     score += 0;
-  //   } else if (item !== array2[i]) {
-  //     score -= 1;
-  //   }
-  //   return score
-  // }, 0);
-  // return finalScore<0?0:finalScore
-  //---------------------------------------2solution-------------------------
-  // let score = 0;
-  // for (let i = 0; i < array1.length; i++) {
-  //   const element = array1[i];
-  //   if (array1[i] === array2[i]) {
-  //     score += 4;
-  //   } else if (array2[i] == "") {
-  //     score += 0;
-  //   } else if (array1[i] !== array2[i]) {
-  //     score -= 1;
-  //   }
-  // }
-  // if (score < 1) {
-  //   return 0;
-  // }
-  // return score;
-}
+// function checkExam(array1, array2) {
+// good luck
+// let finalScore = array1.reduce((score, item, i) => {
+//   if (item === array2[i]) {
+//     score += 4;
+//   } else if (array2[i] == "") {
+//     score += 0;
+//   } else if (item !== array2[i]) {
+//     score -= 1;
+//   }
+//   return score
+// }, 0);
+// return finalScore<0?0:finalScore
+//---------------------------------------2solution-------------------------
+// let score = 0;
+// for (let i = 0; i < array1.length; i++) {
+//   const element = array1[i];
+//   if (array1[i] === array2[i]) {
+//     score += 4;
+//   } else if (array2[i] == "") {
+//     score += 0;
+//   } else if (array1[i] !== array2[i]) {
+//     score -= 1;
+//   }
+// }
+// if (score < 1) {
+//   return 0;
+// }
+// return score;
+// }
 
 // console.log(checkExam(["c","a","b","c","b"], ["a", "c", "b", "",""]), 2);
 // console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]), 16);
@@ -1690,13 +1690,48 @@ function checkExam(array1, array2) {
 
 // console.log(inAscOrder([1, 2, 4, 7, 19]));
 
-function removeUrlAnchor(url) {
-  let finalUrl = "";
-  let i = 0;
-  while (url[i] < "#") {
-    finalUrl += url[i];
-    i++;
+// function removeUrlAnchor(url) {
+//   console.log(url[0]);
+//   let finalUrl = "";
+//   let i = 0;
+//   if (!url.includes("#")) {
+//     return url
+//   }
+//   while (url[i] != "#") {
+//     finalUrl += url[i];
+//     i++;
+//   }
+//   return finalUrl;
+// }
+// console.log(removeUrlAnchor("www.codewars.comabout"), "www.codewars.com");
+
+// function sumOfMinimums(arr) {
+//   let sum = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let a = arr[i].sort((a, b) => a - b);
+//     sum.push(a[0]);
+//   }
+//   return sum.reduce((sum, item) => sum + item, 0);
+// }
+
+// console.log(
+//   sumOfMinimums([
+//     [7, 9, 8, 6, 2],
+//     [6, 3, 5, 4, 3],
+//     [5, 8, 7, 4, 5],
+//   ]),
+//   9
+// );
+
+function averages(numbers) {
+  var final = [];
+  if (numbers) {
+    for (var i = 0; i < numbers.length - 1; i++) {
+      final.push((numbers[i] + numbers[i + 1]) / 2);
+    }
   }
-  return finalUrl;
+  return final;
 }
-console.log(removeUrlAnchor("www.codewars.com#about"), "www.codewars.com");
+
+console.log(averages([2, 2, 2, 2]), [2, 4, 3, -4.5]);
