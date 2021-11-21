@@ -118,11 +118,76 @@
 
 // console.log(narcissistic(1652));
 
-var countBits = function (n) {
-  return n
-    .toString(2)
-    .split("")
-    .reduce((sum, num) => sum + +num, 0);
-};
+// var countBits = function (n) {
+//   return n
+//     .toString(2)
+//     .split("")
+//     .reduce((sum, num) => sum + +num, 0);
+// };
 
-console.log(countBits(10), 2);
+// console.log(countBits(10), 2);
+
+// function persistence(num) {
+//     let i = 0;
+//     while (num.toString().length !== 1) {
+//       num = num.toString().split("").reduce((a,b)=>a*b);
+//       i++;
+//     }
+//     return i;
+// }
+
+// console.log(persistence(999), 3);
+
+// function isValidWalk(walk) {
+//   console.log(walk.length);
+//   if (walk.length !== 10) return false;
+//   let countN = 0;
+//   let countS = 0;
+//   let countW = 0;
+//   let countE = 0;
+
+//   for (let i = 0; i < walk.length; i++) {
+//     let element = walk[i];
+
+//     if (element === "n") {
+//       countN++;
+//     }
+//     if (element === "s") {
+//       countS++;
+//     }
+//     if (element === "w") {
+//       countW++;
+//     }
+//     if (element === "e") {
+//       countE++;
+//     }
+//   }
+
+//   if (countE === countW && countS == countN) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// function isValidWalk(walk) {
+//   if (walk.length !== 10) return false;
+
+//   let finalObj = {
+//     n: 0,
+//     s: 0,
+//     w: 0,
+//     e: 0,
+//   };
+//   console.log(Object.keys(finalObj));
+
+//   for (let i = 0; i < walk.length; i++) {
+//     const element = walk[i];
+//     finalObj[element] += 1;
+//   }
+
+//   return finalObj.n === finalObj.s && finalObj["w"] === finalObj["e"];
+// }
+// console.log(
+//   isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "w", "e"]),
+//   "true"
+// );
