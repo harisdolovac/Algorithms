@@ -1828,14 +1828,27 @@ function maskify(cc) {
 
 // console.log(lastDigit(123767,-4),[3,7,6,7]);
 
-function cookingTime(eggs) {
-  let i = 0;
-  while (i <= 20) {
-    i += 10;
+// function cookingTime(eggs) {
+//   let i = 0;
+//   let minutes =0
+//   while (i < eggs) {
+//     i += 8;
+//     minutes ++
+// console.log(i);
+//   }
+//   return minutes *5
+// }
 
-    console.log(i);
+// console.log(cookingTime(17), 10, "10 eggs");
+
+function elevatorDistance(array) {
+  let reducedArr = [];
+
+  for (let i = 0; i < array.length - 1; i++) {
+    reducedArr.push(array[i] - array[i + 1]);
   }
-  console.log("asad");
+
+  return reducedArr.reduce((sum, item) => sum + Math.abs(item), 0);
 }
 
-console.log(cookingTime(10), 10, "10 eggs");
+console.log(elevatorDistance([5, 2, 8]), 9);
