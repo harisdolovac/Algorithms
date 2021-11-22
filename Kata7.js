@@ -1792,8 +1792,30 @@ function maskify(cc) {
 
 // console.log(nbDig(10, 1), 4);
 
-function f(n) {
-  return n % 1 == 0 && n > 0 ? n * (n / 2) + n / 2 : false;
-}
+// function f(n) {
+//   return n % 1 == 0 && n > 0 ? n * (n / 2) + n / 2 : false;
+// }
 
-console.log(f(1000));
+// console.log(f(1000));
+
+function mygcd(x, y) {
+  let z;
+  if (y > x) {
+    z = x;
+    x = y;
+    y = z;
+  }
+
+  if (x % y === 0) {
+    return y;
+  }
+
+  let half = Math.floor(y / 2);
+
+  for (let i = half; i > 0; i--) {
+    if (x % i == 0 && y % i === 0) {
+      return i;
+    }
+  }
+}
+console.log(mygcd(20, 160), 1);
