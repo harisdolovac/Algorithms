@@ -1724,14 +1724,70 @@ function maskify(cc) {
 //   9
 // );
 
-function averages(numbers) {
-  var final = [];
-  if (numbers) {
-    for (var i = 0; i < numbers.length - 1; i++) {
-      final.push((numbers[i] + numbers[i + 1]) / 2);
+// function averages(numbers) {
+// if (!numbers) {
+//   return []
+// }
+// let final =[]
+//   for (let i = 0; i < numbers.length-1; i++) {
+//     const element = numbers[i];
+//     final.push(((numbers[i] + numbers[i+1])/2))
+//   }
+// return final
+// }
+
+// console.log(averages([2,2,2,2]), [2, 4, 3, -4.5]);
+
+// function countDevelopers(list) {
+//   let count = 0;
+//   for (let i = 0; i < list.length; i++) {
+//     const element = list[i];
+//     if (element.continent === "Europe" && element.language == "JavaScript") {
+//       count += 1;
+//     }
+//   }
+
+//   return count;
+// }
+// var list1 = [
+//   {
+//     firstName: "Noah",
+//     lastName: "M.",
+//     country: "Switzerland",
+//     continent: "Europe",
+//     age: 19,
+//     language: "JavaScript",
+//   },
+//   {
+//     firstName: "Maia",
+//     lastName: "S.",
+//     country: "Tahiti",
+//     continent: "Oceania",
+//     age: 28,
+//     language: "JavaScript",
+//   },
+// ];
+
+// console.log(countDevelopers(list1));
+
+function nbDig(n, d) {
+  // your code
+  let finalArr = [];
+
+  let count = 0;
+  for (let i = 0; i <= n; i++) {
+    finalArr.push(Math.pow(i, 2));
+  }
+  let a = finalArr.map(String).filter((item) => item.includes(d));
+  let b = a.join("");
+  for (let i = 0; i < b.length; i++) {
+    const element = b[i];
+    if (element == d) {
+      count++;
     }
   }
-  return final;
+
+  return count;
 }
 
-console.log(averages([2, 2, 2, 2]), [2, 4, 3, -4.5]);
+console.log(nbDig(10, 1), 4);
