@@ -1798,24 +1798,44 @@ function maskify(cc) {
 
 // console.log(f(1000));
 
-function mygcd(x, y) {
-  let z;
-  if (y > x) {
-    z = x;
-    x = y;
-    y = z;
-  }
+// function mygcd(x, y) {
+//   let z;
+//   if (y > x) {
+//     z = x;
+//     x = y;
+//     y = z;
+//   }
 
-  if (x % y === 0) {
-    return y;
-  }
+//   if (x % y === 0) {
+//     return y;
+//   }
 
-  let half = Math.floor(y / 2);
+//   let half = Math.floor(y / 2);
 
-  for (let i = half; i > 0; i--) {
-    if (x % i == 0 && y % i === 0) {
-      return i;
-    }
+//   for (let i = half; i > 0; i--) {
+//     if (x % i == 0 && y % i === 0) {
+//       return i;
+//     }
+//   }
+// }
+// console.log(mygcd(20, 160), 1);
+
+// function lastDigit(n, d) {
+//   console.log(n);
+//   if (d<=0) return []
+//   return n.toString().split("").slice(-d).map(Number)
+// }
+
+// console.log(lastDigit(123767,-4),[3,7,6,7]);
+
+function cookingTime(eggs) {
+  let i = 0;
+  while (i <= 20) {
+    i += 10;
+
+    console.log(i);
   }
+  console.log("asad");
 }
-console.log(mygcd(20, 160), 1);
+
+console.log(cookingTime(10), 10, "10 eggs");
