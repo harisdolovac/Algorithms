@@ -1770,24 +1770,30 @@ function maskify(cc) {
 
 // console.log(countDevelopers(list1));
 
-function nbDig(n, d) {
-  // your code
-  let finalArr = [];
+// function nbDig(n, d) {
+//   // your code
+//   let finalArr = [];
 
-  let count = 0;
-  for (let i = 0; i <= n; i++) {
-    finalArr.push(Math.pow(i, 2));
-  }
-  let a = finalArr.map(String).filter((item) => item.includes(d));
-  let b = a.join("");
-  for (let i = 0; i < b.length; i++) {
-    const element = b[i];
-    if (element == d) {
-      count++;
-    }
-  }
+//   let count = 0;
+//   for (let i = 0; i <= n; i++) {
+//     finalArr.push(Math.pow(i, 2));
+//   }
+//   let a = finalArr.map(String).filter((item) => item.includes(d));
+//   let b = a.join("");
+//   for (let i = 0; i < b.length; i++) {
+//     const element = b[i];
+//     if (element == d) {
+//       count++;
+//     }
+//   }
 
-  return count;
+//   return count;
+// }
+
+// console.log(nbDig(10, 1), 4);
+
+function f(n) {
+  return n % 1 == 0 && n > 0 ? n * (n / 2) + n / 2 : false;
 }
 
-console.log(nbDig(10, 1), 4);
+console.log(f(1000));
