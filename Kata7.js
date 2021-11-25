@@ -1841,14 +1841,34 @@ function maskify(cc) {
 
 // console.log(cookingTime(17), 10, "10 eggs");
 
-function elevatorDistance(array) {
-  let reducedArr = [];
+// function elevatorDistance(array) {
+//   let reducedArr = [];
 
-  for (let i = 0; i < array.length - 1; i++) {
-    reducedArr.push(array[i] - array[i + 1]);
-  }
+//   for (let i = 0; i < array.length - 1; i++) {
+//     reducedArr.push(array[i] - array[i + 1]);
+//   }
 
-  return reducedArr.reduce((sum, item) => sum + Math.abs(item), 0);
-}
+//   return reducedArr.reduce((sum, item) => sum + Math.abs(item), 0);
+// }
 
-console.log(elevatorDistance([5, 2, 8]), 9);
+// console.log(elevatorDistance([5, 2, 8]), 9);
+
+// function singleDigit(n) {
+//   while(n>9){
+//    n = n.toString(2).split(0).join("").length
+//   }
+// return n
+// }
+
+// console.log(singleDigit(9999), 8);
+
+// 2-2 3-4 4-6 5-8 6-10
+//
+
+// function countRedBeads(n) {
+// if (n<1)return 0
+// return n*2-2
+
+// }
+
+// console.log(countRedBeads(0), 8);
