@@ -1862,13 +1862,29 @@ function maskify(cc) {
 
 // console.log(singleDigit(9999), 8);
 
-// 2-2 3-4 4-6 5-8 6-10
 //
 
 // function countRedBeads(n) {
 // if (n<1)return 0
 // return n*2-2
-
 // }
 
-// console.log(countRedBeads(0), 8);
+// console.log(countRedBeads(5), 8);  // 2-2 3-4 4-6 5-8 6-10
+
+function cubeSum(n, m) {
+  let a = 0;
+  if (m < n) {
+    a = m;
+    m = n;
+    n = a;
+  }
+
+  let sum = 0;
+  for (let i = n + 1; i <= m; i++) {
+    console.log(i);
+    sum += Math.pow(i, 3);
+  }
+  return sum;
+}
+
+console.log(cubeSum(3, 2), 225, "cubeSum(5,0)");
