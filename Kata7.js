@@ -1922,26 +1922,11 @@ function maskify(cc) {
 
 function validateWord(s) {
   let finalObj = {};
-  let finalArr = [];
   s = s.toLowerCase();
   for (let i = 0; i < s.length; i++) {
     const element = s[i];
-
     finalObj[element] = (finalObj[element] || 0) + 1;
   }
-  for (const key in finalObj) {
-    finalArr.push(finalObj[key]);
-  }
-
-  let a = finalArr[0];
-
-  for (let i = 0; i < finalArr.length; i++) {
-    const element = finalArr[i];
-    if (a !== finalArr[i]) {
-      return false;
-    }
-  }
-
-  return true;
+  return [...new Set(Object.values(finalObj))].length == 1 ? true : false;
 }
-console.log(validateWord("Abcabc"));
+console.log(validateWord("Abcabaccb"));
