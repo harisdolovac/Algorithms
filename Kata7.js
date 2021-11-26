@@ -1871,20 +1871,77 @@ function maskify(cc) {
 
 // console.log(countRedBeads(5), 8);  // 2-2 3-4 4-6 5-8 6-10
 
-function cubeSum(n, m) {
-  let a = 0;
-  if (m < n) {
-    a = m;
-    m = n;
-    n = a;
+// function cubeSum(n, m) {
+//   let a = 0;
+//   if (m < n) {
+//     a = m;
+//     m = n;
+//     n = a;
+//   }
+
+//   let sum = 0;
+//   for (let i = n + 1; i <= m; i++) {
+//     console.log(i);
+//     sum += Math.pow(i, 3);
+//   }
+//   return sum;
+// }
+
+// console.log(cubeSum(3, 2), 225, "cubeSum(5,0)");
+
+// function squaresNeeded(grains){
+//   //your code here
+//   let grain =0
+//   for (let i = 1; i <= grains; i*=2) {
+//     grain ++
+//   }
+//   return grain
+// }
+
+// console.log(squaresNeeded(4), 3);
+
+// function sumTriangularNumbers(n) {
+//   let sum = 0,
+//     total = 0;
+//   for (let i = 0; i <= n; i++) {
+//     sum += i * 1;
+//     total += sum;
+//   }
+//   return total;
+// }
+
+// function square(number) {
+//   let count = 1;
+//   if (number == 1) return 1;
+//   for (let i = 2; i <= number; i++) {
+//     count += count;
+//   }
+//   return count;
+// }
+// console.log(square(3), 8);
+
+function validateWord(s) {
+  let finalObj = {};
+  let finalArr = [];
+  s = s.toLowerCase();
+  for (let i = 0; i < s.length; i++) {
+    const element = s[i];
+
+    finalObj[element] = (finalObj[element] || 0) + 1;
+  }
+  for (const key in finalObj) {
+    finalArr.push(finalObj[key]);
   }
 
-  let sum = 0;
-  for (let i = n + 1; i <= m; i++) {
-    console.log(i);
-    sum += Math.pow(i, 3);
+  let a = finalArr[0];
+
+  for (let i = 0; i < finalArr.length; i++) {
+    const element = finalArr[i];
+    if (a !== finalArr[i]) {
+      return false;
+    }
   }
-  return sum;
+
+  return true;
 }
-
-console.log(cubeSum(3, 2), 225, "cubeSum(5,0)");
+console.log(validateWord("Abcabc"));
