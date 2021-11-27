@@ -1920,13 +1920,34 @@ function maskify(cc) {
 // }
 // console.log(square(3), 8);
 
-function validateWord(s) {
-  let finalObj = {};
-  s = s.toLowerCase();
-  for (let i = 0; i < s.length; i++) {
-    const element = s[i];
-    finalObj[element] = (finalObj[element] || 0) + 1;
+// function validateWord(s) {
+//   let finalObj = {};
+//   s = s.toLowerCase();
+//   for (let i = 0; i < s.length; i++) {
+//     const element = s[i];
+//     finalObj[element] = (finalObj[element] || 0) + 1;
+//   }
+//   return [...new Set(Object.values(finalObj))].length == 1 ? true : false;
+// }
+// console.log(validateWord("Abcabaccb"));
+
+function wordsToMarks(string) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let alphabetObj = {};
+  let sum = 0;
+
+  for (let i = 0; i < alphabet.length; i++) {
+    const element = alphabet[i];
+    alphabetObj[alphabet[i]] = i + 1;
   }
-  return [...new Set(Object.values(finalObj))].length == 1 ? true : false;
+
+  console.log(alphabetObj["a"]);
+  console.log(string);
+
+  for (let i = 0; i < string.length; i++) {
+    sum += alphabetObj[string[i]];
+  }
+  return sum;
 }
-console.log(validateWord("Abcabaccb"));
+
+console.log(wordsToMarks("attitude"), 100);
