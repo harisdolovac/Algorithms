@@ -1931,23 +1931,140 @@ function maskify(cc) {
 // }
 // console.log(validateWord("Abcabaccb"));
 
-function wordsToMarks(string) {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  let alphabetObj = {};
-  let sum = 0;
+// function wordsToMarks(string) {
+//   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//   let alphabetObj = {};
+//   let sum = 0;
 
-  for (let i = 0; i < alphabet.length; i++) {
-    const element = alphabet[i];
-    alphabetObj[alphabet[i]] = i + 1;
-  }
+//   for (let i = 0; i < alphabet.length; i++) {
+//     const element = alphabet[i];
+//     alphabetObj[alphabet[i]] = i + 1;
+//   }
 
-  console.log(alphabetObj["a"]);
-  console.log(string);
+//   for (let i = 0; i < string.length; i++) {
+//     sum += alphabetObj[string[i]];
+//   }
+//   return sum;
+// }
 
-  for (let i = 0; i < string.length; i++) {
-    sum += alphabetObj[string[i]];
-  }
-  return sum;
+// console.log(wordsToMarks("attitude"), 100);
+
+// function wordsToMarks(string) {
+//   let sum = 0;
+
+//   for (let i = 0; i < string.length; i++) {
+//     console.log(i);
+//     sum += string.charCodeAt(i) - 96;
+//   }
+//   return sum;
+// }
+
+// console.log(wordsToMarks("attitude"), 100);
+
+// function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+//   let a = [...arguments].map((i) => i * i);
+//   a = a.reduce((sum, item) => {
+//     return sum + item;
+//   }, 0);
+
+//   return parseInt(Math.sqrt(a) / 2);
+// }
+// console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45), 86);
+
+// function isPronic(n) {
+//   for (let i = 0; i <= n; i++) {
+//     if (i * (i + 1) == n) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(isPronic(5));
+
+// function digits(n) {
+//   // code goes here
+//   return n.toString().length
+// }
+
+// console.log(digits(5));
+
+// function isNarcissistic(n) {
+//   let finalNum = n.toString();
+
+//   let sum = [];
+
+//   for (let i = 0; i < finalNum.length; i++) {
+//     sum.push(Math.pow(finalNum[i], finalNum.length));
+//   }
+//   return sum.reduce((sum, item) => sum + item) == n;
+// }
+
+// console.log(isNarcissistic(153));
+
+// function reverseBits(n) {
+//   let a = n.toString(2).split("").reverse().join("");
+//   return parseInt(a, 2);
+// }
+
+// console.log(reverseBits(417), 267);
+
+// var greet = function (name) {
+//   let firstLetter = name[0].toUpperCase();
+
+//   let final = "";
+
+//   for (let i = 1; i < name.length; i++) {
+//     final += name[i].toLowerCase();
+//   }
+//   return "Hello" + " " + firstLetter + final + "!";
+// };
+// console.log(greet("riley"), "Hello Riley!");
+
+// function minimumSteps(numbers, value) {
+//   let a = numbers.sort((a, b) => a - b);
+//   console.log(a);
+
+//   let sum = 0;
+//   let i = 0;
+
+//   while ( sum +a[i]< value) {
+//     sum += a[i];
+//     i++;
+//     console.log(sum);
+
+//   }
+
+//   return i;
+// }
+
+// console.log(minimumSteps([8, 9, 10, 4, 2], 23), 3);
+
+// function specialNumber(n) {
+//   let consist = [0, 1, 2, 3, 4, 5, 6];
+
+//   n = n.toString().split("").map(Number);
+
+//   return n.every((item) => consist.includes(item)) ? "Special!!" : "NOT!!";
+// }
+
+// console.log(specialNumber(6), "Special!!");
+
+// function wordToBin(str) {
+//   let finalArr = [];
+
+//   for (let i = 0; i < str.length; i++) {
+//     finalArr.push("0" + str[i].charCodeAt().toString(2));
+//   }
+//   return finalArr;
+// }
+
+// console.log(wordToBin("man"), ["01101101", "01100001", "01101110"]);
+
+function baseFinder(seq) {
+  //Good luck!
+
+  return [...new Set(seq.join("").split(""))].length;
 }
 
-console.log(wordsToMarks("attitude"), 100);
+console.log(baseFinder([12, 3, 23]));
