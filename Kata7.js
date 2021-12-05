@@ -2061,10 +2061,63 @@ function maskify(cc) {
 
 // console.log(wordToBin("man"), ["01101101", "01100001", "01101110"]);
 
-function baseFinder(seq) {
-  //Good luck!
+// function baseFinder(seq) {
+//   //Good luck!
 
-  return [...new Set(seq.join("").split(""))].length;
-}
+//   return new Set(seq.join("").split("")).size;
+// }
 
-console.log(baseFinder([12, 3, 23]));
+// console.log(baseFinder([12, 3, 23]));
+
+// function isCoprime(x, y) {
+//   let first = [];
+//   let secund = [];
+
+//   for (let i = 0; i <= x; i++) {
+//     if (x % i === 0) {
+//       first.push(i);
+//     }
+//   }
+//   for (let j = 0; j <= y; j++) {
+//     if (y % j === 0) {
+//       secund.push(j);
+//     }
+//   }
+
+//   for (let k = first.length - 1; k >= 0; k--) {
+//     const element = first[k];
+//     if (secund.includes(element)) {
+//       return element === 1
+//     }
+//   }
+// =
+// }
+
+// console.log(isCoprime(12, 39), true, "isCoprime(20, 27)");
+
+// var howManyYears = function (date1, date2) {
+//   let firstDate = date1.slice(0, 4);
+//   let secoundDate = date2.slice(0, 4);
+//   return Math.abs(secoundDate - firstDate);
+// };
+
+// console.log(howManyYears("1997/10/10", "2015/10/10"), 18);
+
+// const add = (a) => (b) => {
+//   return a + b;
+// };
+
+// console.log(add(14)(25), 39);
+
+// function highestValue(a, b) {
+//   const final = (str) => {
+//     return [...str].reduce((sum, item) => sum + item.charCodeAt(), 0);
+//   };
+
+//   return final(b) > final(a) ? b : a;
+// }
+
+// console.log(
+//   highestValue("AaBbCcXxYyZz0189", "KkLlMmNnOoPp4567"),
+//   "KkLlMmNnOoPp4567"
+// );
