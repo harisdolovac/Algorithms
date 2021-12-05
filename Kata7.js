@@ -2121,3 +2121,16 @@ function maskify(cc) {
 //   highestValue("AaBbCcXxYyZz0189", "KkLlMmNnOoPp4567"),
 //   "KkLlMmNnOoPp4567"
 // );
+
+function cubeTimes(times) {
+  let sorted = times.sort((a, b) => a - b);
+
+  let average = 0;
+
+  for (let i = 1; i < sorted.length - 1; i++) {
+    average += sorted[i];
+  }
+
+  return [+(average / 3).toFixed(2), sorted[0]];
+}
+console.log(cubeTimes([9.5, 7.6, 11.4, 10.5, 8.1]), [9.37, 7.6]);
