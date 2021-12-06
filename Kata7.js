@@ -2190,25 +2190,45 @@ let SCORES = {
   Z: 23,
 };
 
-function sexyName(name) {
-  let score = 0;
-  name = name.toUpperCase();
+// function sexyName(name) {
+//   let score = 0;
+//   name = name.toUpperCase();
 
-  for (let i = 0; i < name.length; i++) {
-    if (SCORES[name[i]] == undefined) score += 0;
-    else score += SCORES[name[i]];
-  }
-  console.log(score);
+//   for (let i = 0; i < name.length; i++) {
+//     if (SCORES[name[i]] == undefined) score += 0;
+//     else score += SCORES[name[i]];
+//   }
+//   console.log(score);
 
-  if (score <= 60) {
-    return "NOT TOO SEXY";
-  } else if (score <= 300) {
-    return "PRETTY SEXY";
-  } else if (score <= 599) {
-    return "VERY SEXY";
-  } else {
-    return "THE ULTIMATE SEXIEST";
+//   if (score <= 60) {
+//     return "NOT TOO SEXY";
+//   } else if (score <= 300) {
+//     return "PRETTY SEXY";
+//   } else if (score <= 599) {
+//     return "VERY SEXY";
+//   } else {
+//     return "THE ULTIMATE SEXIEST";
+//   }
+// }
+
+// console.log(sexyName("GUg"), "NOT TOO SEXY");
+
+// const add = (n) => (z) => {
+//   return n + z;
+// };
+// console.log(add(1)(3), 4, "add one to three equals four");
+
+function getSectionIdFromScroll(scrollY, sizes) {
+  let sum = 0;
+
+  for (let i = 0; i < sizes.length; i++) {
+    const element = sizes[i];
+    sum += element;
+    if (sum > scrollY) {
+      return i;
+    }
   }
+  return -1;
 }
 
-console.log(sexyName("GUg"), "NOT TOO SEXY");
+console.log(getSectionIdFromScroll(300, [300, 200, 400, 600, 100]), 0);
