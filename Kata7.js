@@ -2122,15 +2122,41 @@ function maskify(cc) {
 //   "KkLlMmNnOoPp4567"
 // );
 
-function cubeTimes(times) {
-  let sorted = times.sort((a, b) => a - b);
+// function cubeTimes(times) {
+//   let sorted = times.sort((a, b) => a - b);
 
-  let average = 0;
+//   let average = 0;
 
-  for (let i = 1; i < sorted.length - 1; i++) {
-    average += sorted[i];
+//   for (let i = 1; i < sorted.length - 1; i++) {
+//     average += sorted[i];
+//   }
+
+//   return [+(average / 3).toFixed(2), sorted[0]];
+// }
+// console.log(cubeTimes([9.5, 7.6, 11.4, 10.5, 8.1]), [9.37, 7.6]);
+
+function majority(arr) {
+  let finalObj = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    finalObj[arr[i]] = (finalObj[arr[i]] || 0) + 1;
   }
 
-  return [+(average / 3).toFixed(2), sorted[0]];
+  for (const key in finalObj) {
+    let element = finalObj[key];
+  }
+
+  let a = Object.values(finalObj);
+
+  a.sort((a, b) => b - a);
+
+  let final = a[0] == a[1] ? null : Math.max(...a);
+
+  if (final == null) return final;
+
+  let d = Object.keys(finalObj).find((key) => finalObj[key] === final);
+
+  return d;
 }
-console.log(cubeTimes([9.5, 7.6, 11.4, 10.5, 8.1]), [9.37, 7.6]);
+
+console.log(majority(["A", "B", "C", "C", "A", "bbbbbb", "z", "z", "C"]), null);
