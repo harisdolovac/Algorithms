@@ -2135,28 +2135,80 @@ function maskify(cc) {
 // }
 // console.log(cubeTimes([9.5, 7.6, 11.4, 10.5, 8.1]), [9.37, 7.6]);
 
-function majority(arr) {
-  let finalObj = {};
+// function majority(arr) {
+//   let finalObj = {};
 
-  for (let i = 0; i < arr.length; i++) {
-    finalObj[arr[i]] = (finalObj[arr[i]] || 0) + 1;
+//   for (let i = 0; i < arr.length; i++) {
+//     finalObj[arr[i]] = (finalObj[arr[i]] || 0) + 1;
+//   }
+
+//   for (const key in finalObj) {
+//     let element = finalObj[key];
+//   }
+
+//   let a = Object.values(finalObj);
+
+//   a.sort((a, b) => b - a);
+
+//   let final = a[0] == a[1] ? null : Math.max(...a);
+
+//   if (final == null) return final;
+
+//   let d = Object.keys(finalObj).find((key) => finalObj[key] === final);
+
+//   return d;
+// }
+
+// console.log(majority(["A", "B", "C", "C", "A", "bbbbbb", "z", "z", "C"]), null);
+
+let SCORES = {
+  A: 100,
+  B: 14,
+  C: 9,
+  D: 28,
+  E: 145,
+  F: 12,
+  G: 3,
+  H: 10,
+  I: 200,
+  J: 100,
+  K: 114,
+  L: 100,
+  M: 25,
+  N: 450,
+  O: 80,
+  P: 2,
+  Q: 12,
+  R: 400,
+  S: 113,
+  T: 405,
+  U: 11,
+  V: 10,
+  W: 10,
+  X: 3,
+  Y: 210,
+  Z: 23,
+};
+
+function sexyName(name) {
+  let score = 0;
+  name = name.toUpperCase();
+
+  for (let i = 0; i < name.length; i++) {
+    if (SCORES[name[i]] == undefined) score += 0;
+    else score += SCORES[name[i]];
   }
+  console.log(score);
 
-  for (const key in finalObj) {
-    let element = finalObj[key];
+  if (score <= 60) {
+    return "NOT TOO SEXY";
+  } else if (score <= 300) {
+    return "PRETTY SEXY";
+  } else if (score <= 599) {
+    return "VERY SEXY";
+  } else {
+    return "THE ULTIMATE SEXIEST";
   }
-
-  let a = Object.values(finalObj);
-
-  a.sort((a, b) => b - a);
-
-  let final = a[0] == a[1] ? null : Math.max(...a);
-
-  if (final == null) return final;
-
-  let d = Object.keys(finalObj).find((key) => finalObj[key] === final);
-
-  return d;
 }
 
-console.log(majority(["A", "B", "C", "C", "A", "bbbbbb", "z", "z", "C"]), null);
+console.log(sexyName("GUg"), "NOT TOO SEXY");
