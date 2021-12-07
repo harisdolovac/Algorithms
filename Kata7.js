@@ -2218,17 +2218,27 @@ let SCORES = {
 // };
 // console.log(add(1)(3), 4, "add one to three equals four");
 
-function getSectionIdFromScroll(scrollY, sizes) {
-  let sum = 0;
+// function getSectionIdFromScroll(scrollY, sizes) {
+//   let sum = 0;
 
-  for (let i = 0; i < sizes.length; i++) {
-    const element = sizes[i];
-    sum += element;
-    if (sum > scrollY) {
-      return i;
-    }
-  }
-  return -1;
+//   for (let i = 0; i < sizes.length; i++) {
+//     const element = sizes[i];
+//     sum += element;
+//     if (sum > scrollY) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// console.log(getSectionIdFromScroll(300, [300, 200, 400, 600, 100]), 0);
+
+function xMasTree(n) {
+  let hashCount = 1;
+
+  let finalArr = [];
+
+  console.log(finalArr);
 }
 
-console.log(getSectionIdFromScroll(300, [300, 200, 400, 600, 100]), 0);
+console.log(xMasTree(5), ["__#__", "_###_", "#####"]);
