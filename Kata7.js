@@ -2295,23 +2295,59 @@ function maskify(cc) {
 
 // console.log(getNames(data));
 
-function connotation(str) {
-  let a = str
-    .toLowerCase()
-    .split(" ")
-    .filter((item) => item !== "");
-  let positive = 0;
-  let negative = 0;
+// function connotation(str) {
+//   let a = str
+//     .toLowerCase()
+//     .split(" ")
+//     .filter((item) => item !== "");
+//   let positive = 0;
+//   let negative = 0;
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i][0].charCodeAt() <= 109) {
-      positive += 1;
-    } else {
-      negative += 1;
-    }
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i][0].charCodeAt() <= 109) {
+//       positive += 1;
+//     } else {
+//       negative += 1;
+//     }
+//   }
+
+//   return positive >= negative;
+// }
+
+// console.log(connotation("pvfhzrb zhvr mqq mbpzl grxt ahccpdn geumsx"), true);
+
+function decodePass(passArr, bin) {
+  bin = bin.split(" ");
+  console.log(passArr);
+  let a = "01110000";
+  let finalStr = "";
+
+  for (let i = 0; i < bin.length; i++) {
+    const element = bin[i];
+    finalStr += String.fromCharCode(parseInt(element, 2));
   }
-
-  return positive >= negative;
+  return finalStr == passArr[0];
 }
 
-console.log(connotation("pvfhzrb zhvr mqq mbpzl grxt ahccpdn geumsx"), true);
+console.log(
+  decodePass(
+    ["password123", "admin", "admin1"],
+    "01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011"
+  ),
+  "password123"
+);
+
+console.log(
+  decodePass(
+    ["password321", "admin", "admin1"],
+    "01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011"
+  ),
+  false
+);
+console.log(
+  decodePass(
+    ["password456", "pass1", "test12"],
+    "01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011"
+  ),
+  false
+);
