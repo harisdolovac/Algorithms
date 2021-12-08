@@ -2161,34 +2161,34 @@ function maskify(cc) {
 
 // console.log(majority(["A", "B", "C", "C", "A", "bbbbbb", "z", "z", "C"]), null);
 
-let SCORES = {
-  A: 100,
-  B: 14,
-  C: 9,
-  D: 28,
-  E: 145,
-  F: 12,
-  G: 3,
-  H: 10,
-  I: 200,
-  J: 100,
-  K: 114,
-  L: 100,
-  M: 25,
-  N: 450,
-  O: 80,
-  P: 2,
-  Q: 12,
-  R: 400,
-  S: 113,
-  T: 405,
-  U: 11,
-  V: 10,
-  W: 10,
-  X: 3,
-  Y: 210,
-  Z: 23,
-};
+// let SCORES = {
+//   A: 100,
+//   B: 14,
+//   C: 9,
+//   D: 28,
+//   E: 145,
+//   F: 12,
+//   G: 3,
+//   H: 10,
+//   I: 200,
+//   J: 100,
+//   K: 114,
+//   L: 100,
+//   M: 25,
+//   N: 450,
+//   O: 80,
+//   P: 2,
+//   Q: 12,
+//   R: 400,
+//   S: 113,
+//   T: 405,
+//   U: 11,
+//   V: 10,
+//   W: 10,
+//   X: 3,
+//   Y: 210,
+//   Z: 23,
+// };
 
 // function sexyName(name) {
 //   let score = 0;
@@ -2233,12 +2233,85 @@ let SCORES = {
 
 // console.log(getSectionIdFromScroll(300, [300, 200, 400, 600, 100]), 0);
 
-function xMasTree(n) {
-  let hashCount = 1;
+// function xMasTree(n) {
+//   let count = 1;
+//   let finalArr=[]
+//   let sum =0
 
-  let finalArr = [];
+//   let hashTag = [];
 
-  console.log(finalArr);
+//   for (let i = 1; i <= n; i++) {
+//     hashTag.push(count)
+//     count = count +2
+//   }
+//   let underScoreSides =  hashTag[hashTag.length-1]
+//   for (let i = 0; i < hashTag.length; i++) {
+//     const element = hashTag[i];
+//     console.log(element);
+//     let underScore = "_"
+//     let hash ="#"
+//     sum = (underScoreSides - element )/2
+//     finalArr.push( underScore.repeat(sum) + hash.repeat(element) + underScore.repeat(sum))
+//   }
+//   return finalArr.concat(finalArr[0]).concat(finalArr[0])
+// }
+
+// console.log(xMasTree(3), ["__#__", "_###_", "#####"]);
+
+// function calcType(a, b, res) {
+//   if (a + b == res) return "addition";
+//   else if (a * b == res) return "multiplication";
+//   else if (a - b == res) return "subtraction";
+//   else return "division";
+// }
+
+// console.log(calcType(9, 5, 1.8), "division");
+
+// const intDiff = (arr, n) => {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       const element = arr[j];
+//       if (Math.abs(arr[i] - arr[j]) - n == 0) {
+//         sum++;
+//       }
+//     }
+//   }
+//   return sum;
+// };
+
+// console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 4), 3);
+
+// function getNames(data){
+//   return data.map((item)=>item.name)
+// }
+
+// var data = [
+//   {name: 'Joe', age: 20},
+//   {name: 'Bill', age: 30},
+//   {name: 'Kate', age: 23}
+// ]
+
+// console.log(getNames(data));
+
+function connotation(str) {
+  let a = str
+    .toLowerCase()
+    .split(" ")
+    .filter((item) => item !== "");
+  let positive = 0;
+  let negative = 0;
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i][0].charCodeAt() <= 109) {
+      positive += 1;
+    } else {
+      negative += 1;
+    }
+  }
+
+  return positive >= negative;
 }
 
-console.log(xMasTree(5), ["__#__", "_###_", "#####"]);
+console.log(connotation("pvfhzrb zhvr mqq mbpzl grxt ahccpdn geumsx"), true);
