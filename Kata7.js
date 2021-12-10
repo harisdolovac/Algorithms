@@ -2316,38 +2316,47 @@ function maskify(cc) {
 
 // console.log(connotation("pvfhzrb zhvr mqq mbpzl grxt ahccpdn geumsx"), true);
 
-function decodePass(passArr, bin) {
-  bin = bin.split(" ");
-  console.log(passArr);
-  let a = "01110000";
-  let finalStr = "";
+// function adjacentElementsProduct(array) {
+//   let max = -Infinity;
 
-  for (let i = 0; i < bin.length; i++) {
-    const element = bin[i];
-    finalStr += String.fromCharCode(parseInt(element, 2));
+//   for (let i = 0; i < array.length; i++) {
+//     neighbor = array[i] * array[i + 1];
+//     if (neighbor > max) {
+//       max = neighbor;
+//     }
+//   }
+//   return max;
+//   console.log(max);
+// }
+
+// console.log(adjacentElementsProduct([1, -15, 10, -5, 9, -3]), 90);
+
+// function maxNumber(n) {
+//   return +n
+//     .toString()
+//     .split("")
+//     .sort((a, b) => b - a)
+//     .join("");
+// }
+
+// console.log(maxNumber(7389), 9873);
+
+// function noOdds(values) {
+//   return values.filter((item) => item % 2 === 0);
+// }
+
+// console.log(noOdds([0, 1, 2, 3]), [0, 2]);
+
+function minSum(arr) {
+  let sum = 0;
+
+  arr = arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i] * arr[arr.length - (i + 1)];
   }
-  return finalStr == passArr[0];
+
+  return sum / 2;
 }
 
-console.log(
-  decodePass(
-    ["password123", "admin", "admin1"],
-    "01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011"
-  ),
-  "password123"
-);
-
-console.log(
-  decodePass(
-    ["password321", "admin", "admin1"],
-    "01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011"
-  ),
-  false
-);
-console.log(
-  decodePass(
-    ["password456", "pass1", "test12"],
-    "01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011"
-  ),
-  false
-);
+console.log(minSum([12, 6, 10, 26, 3, 24]), 342);
