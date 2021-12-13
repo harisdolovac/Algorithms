@@ -2347,16 +2347,104 @@ function maskify(cc) {
 
 // console.log(noOdds([0, 1, 2, 3]), [0, 2]);
 
-function minSum(arr) {
-  let sum = 0;
+// function minSum(arr) {
+//   let sum = 0;
 
-  arr = arr.sort((a, b) => a - b);
+//   arr = arr.sort((a, b) => a - b);
 
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i] * arr[arr.length - (i + 1)];
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i] * arr[arr.length - (i + 1)];
+//   }
+//   return sum / 2;
+// }
+
+// console.log(minSum([12, 6, 10, 26, 3, 24]), 342);
+
+// function remove(s) {
+//   s = s.split("!");
+//   console.log(s);
+
+//   return s.join("") + "!".repeat(s.length - 1);
+// }
+
+// console.log(remove("Hi! Hi!"), "Hi Hi!!");
+
+// function caseUnification(s) {
+//   let lowerCase=0
+//   let upperCase=0
+
+//   for (let i = 0; i < s.length; i++) {
+//     const element = s[i];
+//     if (element== element.toLowerCase()) {
+//       lowerCase++
+//     }else upperCase++
+//   }
+
+//   return lowerCase>upperCase?s.toLowerCase():s.toUpperCase()
+
+// }
+
+// console.log(caseUnification("SSAba"),"aba");
+
+// function battle(x, y) {
+//   let a = "A".charCodeAt();
+//   let z = "Z".charCodeAt();
+
+//   let sumX = 0;
+//   let sumZ = 0;
+
+//   for (let i = 0; i < x.length; i++) {
+//     const element = x[i];
+//     sumX += element.charCodeAt() - 64;
+//   }
+
+//   for (let i = 0; i < y.length; i++) {
+//     sumZ += y[i].charCodeAt() - 64;
+//   }
+
+//   if (sumX > sumZ) {
+//     return x;
+//   } else if (sumZ > sumX) {
+//     return y;
+//   } else return " it's a tie.";
+// }
+
+// console.log(battle("AAA", "Z"), "Z", "Unfair fight!");
+
+// function passTheDoorMan(word) {
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === word[i + 1]) {
+//       return (word[i].charCodeAt() - 96) * 3;
+//     }
+//   }
+// }
+
+// console.log(passTheDoorMan("lettuce"), 60);
+
+function well(x) {
+  let good = 0;
+  for (let i = 0; i < x.length; i++) {
+    let element = x[i];
+
+    for (let j = 0; j < element.length; j++) {
+      if (typeof element[j] == "number") {
+        element[j] = element[j].toString();
+      }
+      if (element[j].toLowerCase() === "good") {
+        good++;
+      }
+    }
   }
 
-  return sum / 2;
+  return good === 0 ? "Fail!" : good < 3 ? "Publish!" : "I smell a series!";
 }
 
-console.log(minSum([12, 6, 10, 26, 3, 24]), 342);
+console.log(
+  well([
+    ["bad", 3, "bad"],
+    ["bad", "goOd", "bad"],
+    ["bad", "bAd", "bad"],
+    ["bad", "bAd", "bad", "goOd"],
+  ]),
+  "Fail!"
+);
