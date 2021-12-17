@@ -2583,9 +2583,98 @@ function maskify(cc) {
 
 // console.log(automorphic(25), "Automorphic");
 
-function generateShape(integer) {
-  let a = "+".repeat(integer) + "\n";
-  return a.repeat(integer).trim();
+// function generateShape(integer) {
+//   let a = "+".repeat(integer) + "\n";
+//   return a.repeat(integer).trim();
+// }
+
+// console.log(generateShape(4));
+
+// function count(array) {
+//   //your code here
+//   let finalObj = {};
+
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     finalObj[element] = (finalObj[element] || 0) + 1;
+//   }
+//   return finalObj;
+// }
+
+// console.log(count(["a", "a", "b", "b", "b"]), { a: 2, b: 3 });
+
+// function menFromBoys(arr){
+//   //your code here
+//   arr = [...new Set(arr)]
+//   let mens = []
+//   let boys = []
+
+//   arr.forEach(element => {
+//     element %2 ==0? mens.push(element) : boys.push(element)
+//   });
+
+//   return mens.sort((a,b)=>a-b).concat(boys.sort((a,b)=>b-a))
+
+// }
+
+// console.log(menFromBoys([7,3,14,2,17]), [14,17,7,3]);
+
+// function vowelIndices(word) {
+//   let vowels = "aeiouy";
+//   word = word.toLowerCase();
+//   let final = [];
+
+//   for (let i = 0; i < word.length; i++) {
+//     const element = word[i];
+//     if (vowels.includes(element)) {
+//       console.log(i);
+//       final.push(i + 1);
+//     }
+//   }
+//   return final;
+// }
+
+// console.log(vowelIndices("BtMuYE"), [1, 5]);
+
+// function repeats(arr) {
+//   let obj = {};
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     obj[element] = (obj[element] || 0) + 1;
+//   }
+
+//   let sum = 0;
+//   for (const key in obj) {
+//     if (obj[key] == 1) {
+//       sum += +key;
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(repeats([4, 5, 7, 5, 4, 8]), 15);
+
+function balancedNum(number) {
+  number = number.toString();
+  let a = number.toString().length;
+
+  if (number.length % 2 !== 0) {
+    left = number.slice(0, Math.floor(a / 2));
+    right = number.slice(Math.ceil(a / 2));
+  } else {
+    left = number.slice(0, Math.floor(a / 2 - 1));
+    right = number.slice(Math.ceil(a / 2 + 1));
+  }
+
+  let sum = (a) => {
+    return a
+      .split("")
+      .map(Number)
+      .reduce((sum, item) => sum + item, 0);
+  };
+
+  return sum(left) == sum(right) ? "Balanced" : "Not Balanced";
 }
 
-console.log(generateShape(4));
+console.log(balancedNum(7), "Balanced");
