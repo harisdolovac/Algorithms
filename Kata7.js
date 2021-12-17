@@ -2531,21 +2531,61 @@ function maskify(cc) {
 
 // console.log(SequenceSum.showSequence(6));
 
-function solve(arr) {
-  let finalArr = [];
+// function solve(arr) {
+//   let finalArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-    const element = arr[i].toLowerCase();
-    for (let j = 0; j < element.length; j++) {
-      if (element[j].charCodeAt() - 96 == j + 1) {
-        count++;
-      }
-    }
-    finalArr.push(count);
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     let count = 0;
+//     const element = arr[i].toLowerCase();
+//     for (let j = 0; j < element.length; j++) {
+//       if (element[j].charCodeAt() - 96 == j + 1) {
+//         count++;
+//       }
+//     }
+//     finalArr.push(count);
+//   }
 
-  return finalArr;
+//   return finalArr;
+// }
+
+// console.log(solve(["abcoe", "abed", "abffff"]), [4, 3, 3]);
+
+// function cubeOdd(arr) {
+// let sum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   const element = arr[i];
+
+//   if (isNaN(element)) {
+//     return undefined
+//   }
+//   if (element % 2 !== 0) {
+//     sum += Math.pow(element, 3);
+//   }
+// }
+
+//   return sum;
+// }
+
+// console.log(cubeOdd([1, 2, 3, 4,"s"]), 28);
+
+// function largestPairSum(numbers) {
+//   let a = numbers.sort((a, b) => b - a);
+//   return a[0] + a[1];
+// }
+// console.log(largestPairSum([10, 14, 2, 23, 19]), 42, "Sum should be 42");
+
+// function automorphic(n) {
+//   let len = n.toString().length;
+//   let squared = Math.pow(n, 2).toString().slice(-len);
+//   return n == squared ? "Automorphic" : "Not!!";
+// }
+
+// console.log(automorphic(25), "Automorphic");
+
+function generateShape(integer) {
+  let a = "+".repeat(integer) + "\n";
+  return a.repeat(integer).trim();
 }
 
-console.log(solve(["abcoe", "abed", "abffff"]), [4, 3, 3]);
+console.log(generateShape(4));
