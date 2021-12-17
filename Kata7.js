@@ -2655,26 +2655,42 @@ function maskify(cc) {
 
 // console.log(repeats([4, 5, 7, 5, 4, 8]), 15);
 
-function balancedNum(number) {
-  number = number.toString();
-  let a = number.toString().length;
+// function balancedNum(number) {
+//   number = number.toString();
+//   let a = number.toString().length;
 
-  if (number.length % 2 !== 0) {
-    left = number.slice(0, Math.floor(a / 2));
-    right = number.slice(Math.ceil(a / 2));
-  } else {
-    left = number.slice(0, Math.floor(a / 2 - 1));
-    right = number.slice(Math.ceil(a / 2 + 1));
+//   if (number.length % 2 !== 0) {
+//     left = number.slice(0, Math.floor(a / 2));
+//     right = number.slice(Math.ceil(a / 2));
+//   } else {
+//     left = number.slice(0, Math.floor(a / 2 - 1));
+//     right = number.slice(Math.ceil(a / 2 + 1));
+//   }
+
+//   let sum = (a) => {
+//     return a
+//       .split("")
+//       .map(Number)
+//       .reduce((sum, item) => sum + item, 0);
+//   };
+
+//   return sum(left) == sum(right) ? "Balanced" : "Not Balanced";
+// }
+
+// console.log(balancedNum(7), "Balanced");
+
+function findDeletedNumber(arr, mixArr) {
+  let a = mixArr.sort((a, b) => a - b);
+
+  console.log(a);
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    if (element !== a[i]) {
+      return element;
+    }
   }
-
-  let sum = (a) => {
-    return a
-      .split("")
-      .map(Number)
-      .reduce((sum, item) => sum + item, 0);
-  };
-
-  return sum(left) == sum(right) ? "Balanced" : "Not Balanced";
+  return 0;
 }
 
-console.log(balancedNum(7), "Balanced");
+console.log(findDeletedNumber([1, 2, 3, 4, 5], [3, 4, 1, 5]), 2, "Deletion");
