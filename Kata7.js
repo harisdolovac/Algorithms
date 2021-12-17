@@ -2421,30 +2421,131 @@ function maskify(cc) {
 
 // console.log(passTheDoorMan("lettuce"), 60);
 
-function well(x) {
-  let good = 0;
-  for (let i = 0; i < x.length; i++) {
-    let element = x[i];
+// function well(x) {
+//   let good = 0;
+//   for (let i = 0; i < x.length; i++) {
+//     let element = x[i];
+//     for (let j = 0; j < element.length; j++) {
+//       if (typeof element[j] == "number") {
+//         element[j] = element[j].toString();
+//       }
+//       if (element[j].toLowerCase() === "good") {
+//         good++;
+//       }
+//     }
+//   }
 
+//   return good === 0 ? "Fail!" : good < 3 ? "Publish!" : "I smell a series!";
+// }
+
+// console.log(
+//   well([
+//     ["bad", 3, "bad"],
+//     ["bad", "goOd", "bad"],
+//     ["bad", "bAd", "bad"],
+//     ["bad", "bAd", "bad", "goOd"],
+//   ]),
+//   "Fail!"
+// );
+
+// function peak(arr) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const sumToLeft = arr.slice(0, i).reduce((total, value) => total + value, 0)
+//     const sumToRight = arr.slice(i + 1).reduce((total, value) => total + value, 0)
+//     if (sumToLeft === sumToRight) return i
+//   }
+//   return -1
+// }
+
+// console.log(peak([1,2,3,5,3,2,1]), 3);
+
+// function decode(message) {
+//   let finalArr = [];
+//   let finalStr = "";
+
+//   for (let i = 0; i < message.length; i++) {
+//     finalArr.push(123 - message[i].charCodeAt() + 96);
+//   }
+//   console.log(message);
+//   for (let i = 0; i < finalArr.length; i++) {
+//     let element = finalArr[i];
+//     if (element == 187) {
+//       element = 32;
+//     }
+//     finalStr += String.fromCharCode(element);
+//   }
+//   return finalStr;
+// }
+
+// console.log(decode("asvool"), "zhello");
+
+// function validatePIN(pin) {
+//   if (pin.length !== 4 && pin.length !== 6) {
+//     return false;
+//   }
+//   return   pin.replace(/[^0-9]/g, "").length == pin.length
+// }
+
+// console.log(validatePIN("-41.486"), false);
+
+// function reverseNumber(n) {
+//   console.log(n[0]);
+//   n = n.toString().split("").reverse();
+
+//   if (n[n.length - 1] == "-") {
+//     n.pop();
+//     return parseInt("-" + n.join(""));
+//   }
+//   return n.join("")
+// }
+
+// console.log(reverseNumber(-123), -321);
+
+// var SequenceSum = (function () {
+//   function SequenceSum() {}
+
+//   SequenceSum.showSequence = function (count) {
+//     let a = 0;
+
+//     let finalStr = "";
+
+//     for (let i = 0; i <= count; i++) {
+//       a += i;
+//       finalStr += i + "+";
+//     }
+
+//     return `${finalStr.slice(0, -1)} = ${a}`;
+//   };
+
+//   if (count == 0) {
+//     return "0=0";
+//   }
+
+//   if (count < 0) {
+//     return `${count}<0`;
+//   }
+//   return SequenceSum;
+// })();
+
+// console.log(SequenceSum.showSequence(6));
+
+function solve(arr) {
+  let finalArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    const element = arr[i].toLowerCase();
     for (let j = 0; j < element.length; j++) {
-      if (typeof element[j] == "number") {
-        element[j] = element[j].toString();
-      }
-      if (element[j].toLowerCase() === "good") {
-        good++;
+      if (element[j].charCodeAt() - 96 == j + 1) {
+        count++;
       }
     }
+    finalArr.push(count);
   }
 
-  return good === 0 ? "Fail!" : good < 3 ? "Publish!" : "I smell a series!";
+  return finalArr;
 }
 
-console.log(
-  well([
-    ["bad", 3, "bad"],
-    ["bad", "goOd", "bad"],
-    ["bad", "bAd", "bad"],
-    ["bad", "bAd", "bad", "goOd"],
-  ]),
-  "Fail!"
-);
+console.log(solve(["abcoe", "abed", "abffff"]), [4, 3, 3]);
