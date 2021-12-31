@@ -3217,17 +3217,68 @@ function maskify(cc) {
 
 // console.log(arr.numberOfOccurrences(4), 2);
 
-function solve(arr) {
-  let a = [];
-  arr = arr.sort((a, b) => b - a);
-  while (arr.length >= 1) {
-    a.push(arr.shift(), arr.pop());
+// function solve(arr) {
+//   let a = [];
+//   arr = arr.sort((a, b) => b - a);
+//   while (arr.length >= 1) {
+//     a.push(arr.shift(), arr.pop());
+//   }
+//   if (typeof a[a.length - 1] == "undefined") {
+//     a.pop();
+//   }
+//   console.log(a[a.length - 1]);
+//   return a;
+// }
+
+// console.log(solve([15, 11, 10, 7, 12]), [15, 7, 12, 10, 11]);
+
+// function getAges(sum, difference) {
+//   let a, b;
+//   a = (sum - difference) / 2 + difference;
+//   b = (sum - difference) / 2;
+//   return [a, b];
+// }
+
+// console.log(getAges(24, 4), [14, 10]);
+
+function greetDevelopers(list) {
+  let final = [];
+
+  for (let i = 0; i < list.length; i++) {
+    const element = list[i];
+    element.greeting = `Hi ${element.firstName}, what do you like the most about ${element.language}?`;
+
+    final.push(element);
   }
-  if (typeof a[a.length - 1] == "undefined") {
-    a.pop();
-  }
-  console.log(a[a.length - 1]);
-  return a;
+
+  return final;
 }
 
-console.log(solve([15, 11, 10, 7, 12]), [15, 7, 12, 10, 11]);
+var list1 = [
+  {
+    firstName: "Sofia",
+    lastName: "I.",
+    country: "Argentina",
+    continent: "Americas",
+    age: 35,
+    language: "Java",
+  },
+  {
+    firstName: "Lukas",
+    lastName: "X.",
+    country: "Croatia",
+    continent: "Europe",
+    age: 35,
+    language: "Python",
+  },
+  {
+    firstName: "Madison",
+    lastName: "U.",
+    country: "United States",
+    continent: "Americas",
+    age: 32,
+    language: "Ruby",
+  },
+];
+
+console.log(greetDevelopers(list1));
