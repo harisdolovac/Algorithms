@@ -3241,44 +3241,2197 @@ function maskify(cc) {
 
 // console.log(getAges(24, 4), [14, 10]);
 
-function greetDevelopers(list) {
-  let final = [];
+// function greetDevelopers(list) {
+//   let final = [];
 
-  for (let i = 0; i < list.length; i++) {
-    const element = list[i];
-    element.greeting = `Hi ${element.firstName}, what do you like the most about ${element.language}?`;
+//   for (let i = 0; i < list.length; i++) {
+//     const element = list[i];
+//     element.greeting = `Hi ${element.firstName}, what do you like the most about ${element.language}?`;
 
-    final.push(element);
-  }
+//     final.push(element);
+//   }
 
-  return final;
-}
+//   return final;
+// }
 
-var list1 = [
-  {
-    firstName: "Sofia",
-    lastName: "I.",
-    country: "Argentina",
-    continent: "Americas",
-    age: 35,
-    language: "Java",
-  },
-  {
-    firstName: "Lukas",
-    lastName: "X.",
-    country: "Croatia",
-    continent: "Europe",
-    age: 35,
-    language: "Python",
-  },
-  {
-    firstName: "Madison",
-    lastName: "U.",
-    country: "United States",
-    continent: "Americas",
-    age: 32,
-    language: "Ruby",
-  },
-];
+// var list1 = [
+//   {
+//     firstName: "Sofia",
+//     lastName: "I.",
+//     country: "Argentina",
+//     continent: "Americas",
+//     age: 35,
+//     language: "Java",
+//   },
+//   {
+//     firstName: "Lukas",
+//     lastName: "X.",
+//     country: "Croatia",
+//     continent: "Europe",
+//     age: 35,
+//     language: "Python",
+//   },
+//   {
+//     firstName: "Madison",
+//     lastName: "U.",
+//     country: "United States",
+//     continent: "Americas",
+//     age: 32,
+//     language: "Ruby",
+//   },
+// ];
 
-console.log(greetDevelopers(list1));
+// console.log(greetDevelopers(list1));
+
+// var isAnagram = function (test, original) {
+// if (test.length !== original.length) {
+//   return false;
+// }
+// let a = test.toLowerCase().split("").sort()
+// let b = original.toLowerCase().split("").sort()
+
+// let obj = {};
+// let obj2 = {};
+
+// for (let i = 0; i < a.length; i++) {
+//   obj[a[i]] = (obj[a[i]] || 0) + 1;
+//   obj2[b[i]] = (obj2[b[i]] || 0) + 1;
+// }
+// return JSON.stringify(obj) === JSON.stringify(obj2)
+
+// };
+
+// console.log(isAnagram("abb", "bab"), true);
+
+// function solution(digits) {
+
+//   let min =1000
+
+//   for (let i = 0; i < digits.length-5; i++) {
+//     const element = digits[i];
+
+//     let slicedNumber = digits.slice(i,i+5)
+//     if (slicedNumber > min) {
+//       min = slicedNumber
+//     }
+//   }
+//  return min
+
+// // }
+
+// console.log(solution("123458678987651"), 98765);
+
+// function getIssuer(number) {
+//   let a = number.toString().slice(0, 1);
+//   return a == 4
+//     ? "VISA"
+//     : a == 3
+//     ? "AMEX"
+//     : a == 5
+//     ? "Mastercard"
+//     : a == 6
+//     ? "Discover"
+//     : "Unknown";
+// }
+
+// console.log(getIssuer(4111111111111111));
+
+// function tennisGamePoints(score) {
+//   let obj = {
+//     15: 1,
+//     30: 2,
+//     40: 3,
+//     love: 0,
+//   };
+
+//   let b = score.split("-");
+//   let sum = 0;
+
+//   for (let i = 0; i < b.length; i++) {
+//     const element = b[i];
+//     if (b[1] === "all") {
+//       sum += obj[b[0]];
+//     } else {
+//       sum += obj[element];
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(tennisGamePoints("30-all"), 4);
+
+// function sc(n) {
+//   let arr = [];
+//   let finalArr = [];
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 0) {
+//       arr.push(i);
+//     }
+//   }
+
+//   let a = n.toString(2);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i].toString(2);
+//     if (a.includes(element)) {
+//       console.log(element);
+//       finalArr.push(parseInt(element, 2));
+//     }
+//   }
+
+//   return finalArr;
+// }
+
+// console.log(sc(15), [1, 3, 15]);
+
+// function addArrays(array1, array2) {
+//   if (array1.length !== array2.length) return "Error";
+
+//   let finalArr = [];
+
+//   for (let i = 0; i < array1.length; i++) {
+//     finalArr.push(array1[i] + array2[i]);
+//   }
+
+//   return finalArr;
+// }
+
+// console.log(addArrays([1, "a"], [4, 5]), [5, 7]);
+
+// function giveChange(amount) {
+//   let one = +amount.toString().split("").splice(-1).join();
+//   let ten = +amount.toString().split("").splice(-2, 1).join();
+//   let hundred = +amount.toString().split("").splice(0, 1).join();
+
+//   if (amount.toString().length > 3) {
+//     hundred = +amount.toString().split("").splice(0, 2).join("");
+//   }
+
+//   let bils = {
+//     1: 0,
+//     5: 0,
+//     10: 0,
+//     20: 0,
+//     50: 0,
+//     100: 0,
+//   };
+
+//   if (one > 5) {
+//     bils[1] = one - 5;
+//     bils[5] = 1;
+//   } else if (one == 5) {
+//     bils[5] = 1;
+//   } else {
+//     bils[1] = one;
+//   }
+
+//   if (ten == 9) {
+//     bils[50] = 1;
+//     bils[20] = 2;
+//   } else if (ten == 8) {
+//     bils[50] = 1;
+//     bils[20] = 1;
+//     bils[10] = 1;
+//   } else if (ten == 7) {
+//     bils[50] = 1;
+//     bils[20] = 1;
+//   } else if (ten == 6) {
+//     bils[50] = 1;
+//     bils[10] = 1;
+//   } else if (ten == 5) {
+//     bils[50] = 1;
+//   } else if (ten == 4) {
+//     bils[20] = 2;
+//   } else if (ten == 3) {
+//     bils[20] = 1;
+//     bils[10] = 2;
+//   } else if (ten == 2) {
+//     bils[20] = 1;
+//   } else if (ten == 1) {
+//     bils[10] = 1;
+//   }
+
+//   bils[100] = hundred;
+
+//   return Object.values(bils);
+// }
+
+// console.log(giveChange(1032), [2, 1, 1, 0, 0, 2]);
+
+// function duplicateElements(m, n) {
+//   return m.some((el) => n.includes(el));
+// }
+
+// console.log(duplicateElements([1, 2, 3, 4, 5], [1, 6, 7, 8, 9]), true);
+
+// function noonerize(numbers) {
+//   console.log(typeof(numbers[0]));
+
+//   if (typeof(numbers[0])  != "number" || typeof(numbers[1])  != "number" ) {
+//     return 'invalid array'
+//   }
+
+//   let firstNum =
+//     +numbers[1].toString().slice(0, 1) + numbers[0].toString().slice(1);
+//   let secoundNum =
+//     +numbers[0].toString().slice(0, 1) + numbers[1].toString().slice(1);
+//   return Math.abs(firstNum - secoundNum)
+// }
+
+// console.log(noonerize([12,"a"]), 18);
+
+// function countName(anArr, name) {
+//   return anArr.filter((item) => item == name).length;
+// }
+
+// const MAINLIST = [
+//   "Bob",
+//   "Ted",
+//   "Amy",
+//   "Alice",
+//   "Bob",
+//   "Ted",
+//   "Amy",
+//   "Ted",
+//   "Amy",
+//   "Fred",
+// ];
+// console.log(countName(MAINLIST, "Ted"), 3);
+
+// function solution(value) {
+//   value = value.toString();
+//   let a = Array(5 - value.length).fill(0);
+//   a = a.concat(+value).join("");
+//   return `Value is ${a}`;
+// }
+// console.log(solution(5), "Value is 00005");
+
+// function paul(x) {
+//   let obj = {
+//     kata: 5,
+//     "Petes kata": 10,
+//     life: 0,
+//     eating: 1,
+//   };
+
+//   let a = x.reduce((sum, item) => sum + obj[item], 0);
+//   if (a < 40) {
+//     return "Super happy!";
+//   } else if (a < 70) {
+//     return "Happy!";
+//   } else if (a < 100) {
+//     return "Sad!";
+//   } else return "Miserable!";
+// }
+
+// console.log(paul(["life", "eating", "life"]), "Super happy!");
+
+// function broken(x) {
+
+// let final =""
+// for (let i = 0; i < x.length; i++) {
+//   let element = x[i];
+//   if (element == 1) {
+//     element = 0
+//   } else element =1
+//  final +=element
+// }
+
+// return final;
+
+// }
+
+// console.log(broken("100"), "011");
+
+// function bald(x) {
+//   let obj = {
+//     0: "Clean!",
+//     1: "Unicorn!",
+//     2: "Homer!",
+//   };
+
+//   let count=0
+//   let final=""
+
+//   for (let i = 0; i < x.length; i++) {
+//     const element = x[i];
+//     if (element =="/") {
+//       count ++
+//       final +="-"
+//     }else final +="-"
+//   }
+
+//   let txt = "";
+
+//   if (count < 3) {
+//     txt = obj[count];
+//   } else if (count <= 5) {
+//     txt = "Careless!";
+//   } else txt = "Hobo!";
+
+//   return [final, txt];
+// }
+
+// console.log(bald("/-"), ["----------", "Unicorn!"]);
+
+// function gordon(a) {
+//   let vowel = { a: "@", e: "*", i: "*", o: "*", u: "*" };
+//   let final = "";
+//   a = a.split("");
+//   console.log(a);
+//   console.log(vowel["a"]);
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     if (element == " ") {
+//       final += "!!!!";
+//     }
+//     if (vowel[element]) {
+//       final += vowel[element];
+//     } else final += element.toUpperCase();
+//   }
+
+//   return final;
+// }
+
+// console.log(
+//   gordon("What feck damn cake"),
+//   "WH@T!!!! F*CK!!!! D@MN!!!! C@K*!!!!"
+// );
+
+// function shorter_reverse_longer(a, b) {
+//   if (b.length > a.length) {
+//     [a, b] = [b, a];
+//   }
+//   a = [...a].reverse().join("");
+//   return b + a + b;
+// }
+
+// console.log(shorter_reverse_longer("hello", "bau"), "bauollehbau");
+
+// function arrange(arr) {
+//   let a = [...arr];
+
+//   let z = ['21a','111a']
+
+//   console.log(z.sort((a,b)=>b>a));
+
+//   let b = [];
+//   let c = [];
+//   let d = [];
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+
+//     if (element.slice(-2) !== "KG" && element.slice(-1) !== "T") {
+//       b.push(element);
+//     }
+//     if (element.slice(-2) == "KG") {
+//       c.push(element);
+//     }
+//     if (element.slice(-1) == "T") {
+//       d.push(element);
+//     }
+//   }
+//   b = b.sort((x,y)=>x>y);
+//   c=c.sort((x,y)=>y>x);
+//   d=d.sort((x,y)=>y>x);
+//   return b.concat(c).concat(d);
+// }
+
+// console.log(arrange( [ '300G', '200G', '150G', '100KG' ]), [
+//   "300G",
+//   "450G",
+//   "900KG",
+//   "4T",
+// // ]);
+
+// const removeConsecutiveDuplicates = (s) => {
+
+// let final =[]
+// s=s.split(" ")
+// for (let i = 0; i < s.length; i++) {
+//   const element = s[i];
+//   console.log(s[i]);
+//   if (s[i] !== s[i+1]) {
+//     final.push(s[i])
+//   }
+// }
+// return final.join(" ")
+
+// };
+// console.log(
+//   removeConsecutiveDuplicates(
+//     "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+//   ),
+//   "alpha beta gamma delta alpha beta gamma delta"
+// );
+
+// function validSpacing(s) {
+//   for (let i = 0; i < s.length; i++) {
+//     const element = s[i];
+//     if (s[i] == " " && s[i + 1] == " ") {
+//       return false;
+//     }
+//     console.log(s[0]);
+//     if (s[0] == " " || s[s.length - 1] == " ") {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// console.log(validSpacing("Hello world "), true);
+
+// function correctness(bobsDecisions, expertDecisions) {
+//   let sum =0
+//   for (let i = 0; i < bobsDecisions.length; i++) {
+//     if (bobsDecisions[i] == expertDecisions[i]) {
+//       sum += 1
+//     }else if (bobsDecisions[i] == "?" ||  expertDecisions[i] =="?") {
+//       sum += 0.5
+//     }else sum +=0
+//   }
+//   return sum
+// }
+
+// console.log(correctness(['M', '?', 'M'], ['M', 'F', '?']), 2, 'guessed');
+
+// function coolString(s) {
+//   if (s.length < 2) {
+//     return false;
+//   }
+//   for (let i = 1; i < s.length; i++) {
+//     const element = s[i];
+//     if (s[i - 1] == s[i - 1].toLowerCase() && s[i] == s[i].toLowerCase()) {
+//       return false;
+//     }
+//     if (s[i - 1] == s[i - 1].toUpperCase() && s[i] == s[i].toUpperCase()) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(coolString("aQwFdA"), true);
+
+// function average(scores) {
+//   return Math.round(scores.reduce((x, y) => x + y, 0) / scores.length);
+// }
+// const scores = [5, 78, 52, 900, 1];
+// console.log(average(scores), 207);
+
+// function countLanguages(list) {
+//   // thank you for checking out the Coding Meetup kata :)
+//   let ans = {};
+//   for (let i = 0; i < list.length; i++) {
+//     const element = list[i];
+//     ans[list[i].language] = (ans[list[i].language] || 0) + 1;
+//   }
+//   return ans;
+// }
+
+// var list1 = [
+//   {
+//     firstName: "Noah",
+//     lastName: "M.",
+//     country: "Switzerland",
+//     continent: "Europe",
+//     age: 19,
+//     language: "C",
+//   },
+//   {
+//     firstName: "Anna",
+//     lastName: "R.",
+//     country: "Liechtenstein",
+//     continent: "Europe",
+//     age: 52,
+//     language: "JavaScript",
+//   },
+//   {
+//     firstName: "Ramon",
+//     lastName: "R.",
+//     country: "Paraguay",
+//     continent: "Americas",
+//     age: 29,
+//     language: "Ruby",
+//   },
+//   {
+//     firstName: "George",
+//     lastName: "B.",
+//     country: "England",
+//     continent: "Europe",
+//     age: 81,
+//     language: "C",
+//   },
+// ];
+
+// console.log(countLanguages(list1));
+
+// function fireFight(s) {
+//   s = s.split(" ");
+//   let final = "";
+//   for (let i = 0; i < s.length; i++) {
+//     let element = s[i];
+//     if (element == "Fire") {
+//       element = "~~";
+//     }
+//     final += element +" "
+//   }
+//   return final;
+// }
+// console.log(
+//   fireFight(
+//     "Boat Rudder Water Fire"
+//   ),
+
+// );
+
+// function planeSeat(a) {
+//   let obj = {
+//     A: "Left",
+//     B: "Left",
+//     C: "Left",
+//     D: "Middle",
+//     E: "Middle",
+//     F: "Middle",
+//     G: "Right",
+//     H: "Right",
+//     K: "Right",
+//   };
+
+//   let char = a.slice(-1);
+//   let num = +a.slice(0, -1);
+//   if (obj[char] === undefined) {
+//     return "No Seat!!";
+//   }
+
+//   if (num <= 20) {
+//     return "Front-" + obj[char];
+//   }
+//   if (num <= 40) {
+//     return "Middle-" + obj[char];
+//   }
+//   if (num <= 60) {
+//     return "Back-" + obj[char];
+//   } else return "No Seat!!";
+// }
+
+// console.log(planeSeat("22p"), "Front-Left");
+
+// const sumSquareEvenRootOdd = (ns) => {
+//   // your code goes here
+
+//   let arr = [];
+
+//   for (let i = 0; i < ns.length; i++) {
+//     const element = ns[i];
+//     if (element % 2 == 0) {
+//       arr.push(Math.pow(element, 2));
+//     } else arr.push(Math.sqrt(element));
+//   }
+
+//   return arr.reduce((sum, item) => sum + item, 0).toFixed(2);
+// };
+
+// console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
+
+// function trim(x) {
+//   for (let i = 0; i < x.length; i++) {
+//     let element = x[i];
+//     for (let j = 0; j < element.length; j++) {
+//       x[i][j] = element[j].replace("J", "|");
+//       x[x.length - 1][j] = "...";
+//     }
+//   }
+//   return x;
+// }
+
+// console.log(
+//   trim([
+//     ["J", "|"],
+//     ["J", "|"],
+//     ["...", "|", "asd"],
+//     ["...", "|", "asd"],
+//     ["...", "|", "asd"],
+//   ])
+// );
+
+// function equalize(array) {
+//   let final = [];
+
+//   let divisor = array[0];
+//   console.log(divisor);
+
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     let res = element - divisor;
+
+//     if (res >= 0) {
+//       final.push(`+${res}`);
+//     } else final.push(`${res}`);
+//   }
+
+//   return final;
+
+//   console.log(final);
+// }
+
+// console.log(equalize([20, 30, 35, 10]), ["+0", "+10", "+15", "-10"]);
+
+// function mathEngine(arr) {
+
+//   if (!arr) {
+//     return 0
+//   }
+//   let sumP =1
+//   let sumN=0
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     if (arr[i]>=0) {
+//       sumP *=arr[i]
+//     }else if (arr[i]<0) {
+//       sumN +=arr[i]
+//     }
+//   }
+// return sumP+sumN
+// }
+// console.log(mathEngine([null]));
+
+// function jeringonza(a) {
+//   let vowels = ["a", "e", "i", "o", "u"];
+//   let vowelsUp = ["A", "E", "I", "O", "U"];
+
+//   let final = "";
+
+//   for (let i = 0; i < a.length; i++) {
+//     console.log(a[i]);
+//     if (vowels.includes(a[i])) {
+//       final += a[i] + "p" + a[i];
+//     } else if (vowelsUp.includes(a[i])) {
+//       final += a[i] + "P" + a[i];
+//     } else final += a[i];
+//   }
+//   return final;
+// }
+
+// console.log(jeringonza("jWEere"), "jeperipingoponzapa");
+
+// function isInMiddle(seq) {
+//   let sides = seq.split("abc");
+//   let a = sides.map(Number)
+//   console.log(sides);
+//   console.log(a);
+//   if (sides.length ==1 || sides[0]=="" ) return false
+
+//   if (sides[0].length - 1 > sides[1].length) {
+//     return false;
+//   }
+//   if (sides[1].length - 1 > sides[0].length) {
+//     return false;
+//   }
+
+//   return true;
+// }
+
+// console.log(isInMiddle("abc"), true);
+
+// function compare(s1, s2) {
+//   let sum1 = 0;
+//   let sum2 = 0;
+
+//   if (s1 !== null) {
+//     for (let i = 0; i < s1.length; i++) {
+//       const element = s1[i].toUpperCase().charCodeAt();
+//       console.log(element);
+//       if (element > 64 && element < 91) {
+//         sum1 += element;
+//       } else sum1 = 0;
+//     }
+//   }
+
+//   if (s2 !== null) {
+//     for (let i = 0; i < s2.length; i++) {
+//       const element = s2[i].toUpperCase().charCodeAt();
+
+//       if (element > 64 && element < 91) {
+//         sum2 += element;
+//       } else sum2 = 0;
+//     }
+//   }
+
+//   return sum1 == sum2;
+// }
+
+// console.log(compare("AD", "ffPFF"), true);
+
+// function solve(a, b) {
+//   let fin = "";
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     if (!b.includes(element)) {
+//       fin += element;
+//     }
+//   }
+//   for (let i = 0; i < b.length; i++) {
+//     const element = b[i];
+//     if (!a.includes(element)) {
+//       fin += element;
+//     }
+//   }
+//   return fin;
+// }
+
+// console.log(solve("xyabb", "xzca"), "ybbzc");
+
+// function hydrate(s) {
+//   s = s
+//     .replace(/[^0-9\.]+/g, "")
+//     .split("")
+//     .reduce((sum, item) => sum + +item, 0);
+//     if (s == 1) {
+//   return `${s} glass of water`;
+
+//     }
+//   return `${s} glasses of water`;
+// }
+// console.log(
+//   hydrate("1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer"),
+//   "10 glasses of water"
+// );
+
+// reverse = function (array) {
+//   let fin = [];
+
+//   for (let i = array.length - 1; i >= 0; i--) {
+//     const element = array[i];
+//     fin.push(element);
+//   }
+
+//   return fin;
+// };
+
+// console.log(reverse([1, 2, 3]), [3, 2, 1]);
+
+// function getStrings(city){
+
+//   city = city.toLowerCase()
+
+//   let obj={}
+
+//   for (let i = 0; i < city.length; i++) {
+//     const element = city[i];
+//     obj[element] = (obj[element] || "") +"*"
+//   }
+
+//   let str=""
+//   for (let key in obj) {
+//     if (key !== ' ') {
+//         str += key + ':' + obj[key] + ',';
+//     }
+// }
+
+// return str.substring(0, str.length - 1);
+// }
+// console.log(getStrings("Chicago"), "c:**,h:*,i:*,a:*,g:*,o:*");;
+
+// function sortMyString(S) {
+//   let str = "";
+
+//   for (let i = 0; i < S.length; i++) {
+//     const element = S[i];
+//     if (i % 2 == 0) {
+//       str += element;
+//     }
+//   }
+//   str += " ";
+//   for (let i = 0; i < S.length; i++) {
+//     const element = S[i];
+//     if (i % 2 !== 0) {
+//       str += element;
+//     }
+//   }
+//   return str;
+// }
+
+// console.log(sortMyString("CodeWars"), "CdWr oeas");
+
+// function initializeNames(name) {
+//   a = name.split(" ");
+//   if (a.length < 3) {
+//     return name;
+//   }
+//   let fin = a[0] + " ";
+
+//   for (let i = 1; i < a.length - 1; i++) {
+//     const element = a[i];
+//     console.log(element);
+//     let b = element.slice(0, 1);
+//     console.log(b);
+//     fin += b + "." + " ";
+//   }
+//   return fin + a[a.length - 1];
+// }
+
+// console.log(
+//   initializeNames("Alice Betty Catherine Davis"),
+//   "Alice B. C. Davis",
+//   ""
+// );
+
+// const findAll = (array, n) => {
+//   let sum = 0;
+
+//   array.forEach((element) => {
+//     if (element == n) {
+//       sum++;
+//     }
+//   });
+//   return [sum, array.lastIndexOf(n)];
+// };
+
+// console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3), [2, 4]);
+// function filterEvenLengthWords(words) {
+//   return words.filter((item, i) => i % 2 == 0);
+// }
+// console.log(filterEvenLengthWords(["One", "Two", "Three", "Four"]));
+
+//returns the test score
+// function scoreTest(str, right, omit, wrong) {
+//   console.log(str, right, omit, wrong);
+
+// let pos = 0;
+// let neutral = 0;
+// let neg = 0;
+
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i] == 0) {
+//     pos++;
+//   } else if (str[i] == 1) {
+//     neutral++;
+//   } else {
+//     neg++;
+//   }
+// }
+
+// console.log(pos, neutral, neg);
+
+// return pos * right + neutral * omit - neg * wrong;
+// }
+
+// console.log(scoreTest([0, 0, 0, 0, 2, 1, 0], 2, 0, 1), 9);
+
+// function swap(string) {
+//   console.log(string);
+
+//   let vowel = ["a", "e", "i", "o", "u"];
+
+//   return [...string]
+//     .map((item) => {
+//       if (vowel.includes(item)) {
+//         return item.toUpperCase();
+//       }
+//       return item;
+//     })
+//     .join("");
+// }
+// console.log(swap("HelloWorld!"));
+
+// function makePassword(phrase) {
+//   let obj ={
+//     "i":1,
+//     "I":1,
+//     "o":"0",
+//     "O":0,
+//     "s":5,
+//     "S":5
+//   }
+//   let final =""
+//   let a = phrase.split(" ")
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     let b =element[0]
+//    if (obj[b]) {
+//      final += obj[b]
+//    }else final += b
+//   }
+//   return final
+// }
+
+// console.log(
+//   makePassword("Give me liberty or give me death")
+// );
+
+// function createArrayOfTiers(num) {
+//   num = num.toString();
+
+//   let final = [];
+//   for (let i = 1; i <= num.length; i++) {
+//     final.push(num.slice(0, i));
+//   }
+
+//   return final;
+// }
+
+// console.log(createArrayOfTiers(420), ["4", "42", "420"]);
+
+// function solution(string,limit){
+//   if(string.length <= limit){
+//     return string
+//   }
+//     return [...string].slice(0,limit).join("")+"..."
+// }
+
+// console.log(solution("Testing string",3));
+
+// function scoreboard(string) {
+//   string = string.split(" ");
+//   let score = {
+//     nil: 0,
+//     one: 1,
+//     two: 2,
+//     three: 3,
+//     four: 4,
+//     five: 5,
+//     six: 6,
+//     seven: 7,
+//     eight: 8,
+//     nine: 9,
+
+//   };
+//   return string
+//     .filter((s) => score.hasOwnProperty(s))
+//     .map((item) => score[item]);
+// }
+
+// console.log(scoreboard("Arsenal a two two "), [2, 2]);
+
+//
+
+//const remainder = (D, d) => {
+//   return D-Math.floor(D/d)*d
+// }
+
+// console.log( remainder(27,5), 1)
+
+// function remove(string) {
+//   let a = string.split(" ");
+
+//   let final = "";
+
+//   for (let i = 0; i < a.length; i++) {
+//     let count = 0;
+//     const element = a[i];
+
+//     for (let j = 0; j < element.length; j++) {
+//       if (element[j] == "!") {
+//         count++;
+//       }
+//     }
+//     console.log(count);
+//     if (count > 1 || count === 0) {
+//       final += element + " ";
+//     }
+//   }
+//   return final.trim();
+// }
+
+// console.log(remove("Hi !Hi! Hi!"), "!Hi!");
+
+// function stringMerge(string1, string2, letter) {
+//   let firstStop = string1.indexOf(letter);
+//   let secoundStop = string2.indexOf(letter);
+//   return string1.slice(0, firstStop) + string2.slice(secoundStop);
+// }
+
+// console.log(stringMerge("person", "here", "e"), "pere");
+
+// function scrollingText(text){
+//   text = text.toUpperCase()
+//   let finalArr =[]
+//   for (let i = 0; i < text.length; i++) {
+//     const element = text[i];
+//     finalArr.push(text.slice(i)+ text.slice(0,i))
+//   }
+
+// return finalArr
+// }
+
+// console.log(scrollingText("abc"), ["ABC","BCA","CAB"]);
+
+//function product(string) {
+//let exclamationMark = 0;
+// let questionMark = 0;
+
+// for (let i = 0; i < string.length; i++) {
+//   const element = string[i];
+//   if (element === "?") {
+//     questionMark++;
+//   } else if (element === "!") {
+//     exclamationMark++;
+//   }
+//
+// return exclamationMark * questionMark;
+// }
+
+// console.log(product("!????!!!?"));
+
+// function consecutive(arr) {
+//   let min = Math.min(...arr);
+//   let max = Math.max(...arr);
+//   let finalArr=[]
+
+//   for (let i = min; i < max; i++) {
+//     if (!arr.includes(i)) {
+//       finalArr.push(i)
+//     }
+//   } return finalArr.length
+// }
+
+// console.log(consecutive([1,2,3,4,5,8]), 2);
+
+// function replaceAll(seq, find, replace) {
+
+//   if (seq.length === 0) {
+//     return seq;
+//   }
+//   let finalArr = [];
+
+//   for (let i = 0; i <= seq.length; i++) {
+//     if (seq[i] === find) {
+//       finalArr.push(replace);
+//     } else if (seq[i]) finalArr.push(seq[i]);
+//   }
+//   if (typeof seq[0] == "string") {
+//     return finalArr.join("");
+//   }
+//   return finalArr;
+// }
+// console.log(replaceAll([
+//   'H', 'e', 'l', 'l',
+//   '0', ' ', 'W', '0',
+//   'r', 'l', 'd'
+// ],"o",0));
+
+// function mostFrequentItemCount(col) {
+
+// let obj ={}
+// let fin=[]
+//     for (let i = 0; i < col.length; i++) {
+//       const element = col[i];
+//       obj[element] = (obj[element] || 0)+1
+//     }
+// for (const key in obj) {
+//  fin.push(obj[key])
+// }
+// return Math.max(...fin)
+
+// }
+
+// console.log(mostFrequentItemCount([3, -1, -1,-1,,2,2,4,4]), 2);;
+
+// function createDict(keys, values) {
+//   let finObj = {};
+//   for (let i = 0; i < keys.length; i++) {
+//     const element = keys[i];
+//     if (values[i] == undefined) {
+//       values[i] = null;
+//     }
+//     finObj[keys[i]] = values[i];
+//   }
+//   return finObj;
+// }
+
+// console.log(createDict(["a", "b", "c", "d"], [1, 2, 3]), { a: 1, b: 2, c: 3 });
+
+// function swap(str){
+//   return [...str].map((item)=>{
+//     if(item == item.toUpperCase()){
+//       return  item.toLowerCase()
+//     }else if(item==item.toLowerCase()){
+//       return item.toUpperCase()
+//     }
+//   }).join("")
+//   }
+
+// console.log(swap('HelloWorld'), 'hELLOwORLD');
+
+// function mirror(data) {
+//   let first = [...data].sort((a, b) => a - b).slice(0, -1);
+//   let secound = [...data].sort((a, b) => b - a);
+//   return first.concat(secound);
+// }
+
+// console.log(mirror([1, 2, 3]));
+
+// function minMinMax(array) {
+//   let sorted = array.sort((a,b)=>a-b)
+//   let middle = sorted[0]
+
+//   while (sorted.includes(middle)) {
+//     middle++
+//   }
+//   return [sorted[0],middle,sorted[sorted.length-1]]
+// }
+
+// console.log(minMinMax([1, 3, -3, -2, 8, -1]), [-3, 0, 8], 'Test Failed');;
+
+// function duplicates(array) {
+//   let obj = {};
+//   let count = 0;
+
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     obj[element] = (obj[element] || 0) + 1;
+//   }
+
+//   for (const key in obj) {
+//     if (obj[key] % 2 !== 0 && obj[key] > 1) {
+//       obj[key]--;
+//     }
+
+//     if (obj[key] % 2 === 0) {
+//       if (obj[key] > 2) {
+//         count += obj[key] / 2;
+//       } else count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(duplicates([1, 2, 5, 6, 5, 2]), 2);
+
+// function explode(x) {
+//   if (typeof x[0] == "number" && typeof x[1] == "number") {
+//     return Array(x[0] + x[1]).fill(x);
+//   } else if (typeof x[0] == "number") {
+//     return Array(x[0]).fill(x);
+//   } else if (typeof x[1] == "number") {
+//     return Array(x[1]).fill(x);
+//   } else return "Void!";
+// }
+
+// console.log(explode(["a", 3]));
+
+// function diagonalSum(matrix) {
+//   let sum = 0;
+//   for (let i = 0; i < matrix.length; i++) {
+//     sum += matrix[i][i];
+//   }
+
+//   return sum;
+// }
+
+// console.log(
+//   diagonalSum([
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//   ]),
+//   15
+// );
+
+// function isFlush(cards) {
+//   let signArr = [];
+
+//   for (let i = 0; i < cards.length; i++) {
+//     const element = cards[i];
+//     signArr.push(element.slice(-1));
+//   }
+//   console.log(signArr);
+//   return signArr.every((item, i, arr) => arr[0] === item);
+// }
+
+// console.log(isFlush(["AS", "3S", "9S", "KS", "4S"]), true);
+
+// function duckShoot(ammo, aim, ducks){
+
+// let sShots=Math.floor(ammo*aim)
+// let finalStr =""
+
+// for (let i = 0; i < ducks.length; i++) {
+//   let element = ducks[i];
+//   if (element == 2 && sShots >0) {
+//     element ="X"
+//     sShots--
+//   }
+//   finalStr +=element
+// }
+
+// return finalStr
+
+// }
+
+// console.log(duckShoot(9, 0.42, '|~~~~~~~2~2~~~|'), '|~~~~~~~X~2~~~|'); ;
+
+// function isDivisible(...nums){
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[0] % nums[i] !==0) {
+//      return false
+//     }
+//   }
+//   return true
+// }
+
+// console.log(isDivisible(3,3,4),false);;
+
+// function twoDecimalPlaces(number) {
+//   let a = String(number).split(".")[0];
+//   let b = String(number).split(".")[1].slice(0, 2);
+
+//   let c = a + "." + b;
+//   return Number(c);
+// }
+
+// console.log(twoDecimalPlaces(10.1289767789));
+
+// function findSum() {
+//   let a = [...arguments];
+//   let c = a.some((item) => item < 0);
+//   if (c) return -1;
+
+//   return [...arguments].reduce((sum, item) => sum + item, 0);
+// }
+
+// console.log(findSum(1, 3, 5));
+
+// function numbersWithDigitInside(x, d) {
+//   let xNums = [];
+
+//   let count = 0;
+//   let sum =0
+//   let product = 1;
+//   for (let i = 1; i <= x; i++) {
+//     xNums.push(i);
+//   }
+//   let c = xNums.map(String);
+
+//   for (let i = 0; i < c.length; i++) {
+//     const element = c[i];
+
+//     if (element.includes(String(d))) {
+//       console.log(element);
+//       sum += +element;
+//       product *= element;
+//       count++;
+//     }
+//   }
+
+//   return [count, sum, product];
+// }
+
+// console.log(numbersWithDigitInside(11, 1), [2, 30, 200]);
+
+// function nicknameGenerator(name) {
+//   let vowel = "aeiou";
+//   if (name.length < 4) {
+//     return "Error: Name too short";
+//   }
+
+//   if (vowel.includes(name[2])) {
+//     return name.slice(0, 4);
+//   }
+//   return name.slice(0, 3);
+// }
+// console.log(nicknameGenerator("Jimmy"), "Jim");
+// console.log(nicknameGenerator("Jiemmy"), "Jim");
+
+// function consecutive(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (
+//       (arr[i] === a && arr[i + 1] == b) ||
+//       (arr[i] === b && arr[i + 1] == a)
+//     ) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(consecutive([1, 3, 5, 7], 3, 1), true);
+
+// function isLucky(n) {
+//   return (
+//     String(n)
+//       .split("")
+//       .reduce((sum, item) => sum + item, 0) %
+//       9 ==
+//     0
+//   );
+// }
+
+// console.log(isLucky(1892376));
+
+// function leaderB(user, user_score, your_score) {
+//   if (user_score < your_score) {
+//     return "Winning!";
+//   }
+//   if (user_score == your_score) {
+//     return "Only need one!";
+//   }
+//   let totalScore = user_score - your_score;
+//   let katas3 = Math.floor(totalScore / 3);
+
+//   let kata1 = totalScore - katas3 * 3;
+
+//   return `To beat ${user}'s score, I must complete ${katas3} Beta kata and ${kata1} 8kyu kata.${
+//     katas3 + kata1 > 1000 ? " Dammit!" : ""
+//   }`;
+// }
+
+// console.log(leaderB("g964", 23914, 3867));
+
+// function solve(a){
+//   let even=0
+//   let odd=0
+//   a =a.filter((item)=>typeof (item) == "number" )
+//   console.log(a);
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//    if (a[i]%2==0 ) {
+//      even++
+//    }else if (a[i]%2!==0) {
+//     odd++
+//   }
+//   }return even -odd
+// };
+
+// console.log(solve([0,1,2,3,'a','b']),0);;
+
+// function vowelStart(str) {
+//   let vowels = "aeiou";
+//   console.log(str);
+
+//   let a = str
+//     .split("")
+//     .filter(
+//       (item) =>
+//         item !== " " &&
+//         item !== "_" &&
+//         item !== "-" &&
+//         item !== "!" &&
+//         item !== ","
+//     )
+//     .join("");
+//   let finalStr = "";
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+
+//     if (vowels.includes(element)) {
+//       finalStr += " " + element;
+//     } else finalStr += element;
+//   }
+//   if (finalStr[0] == " ") {
+//     return finalStr.toLowerCase().slice(1);
+//   }
+//   return finalStr.toLowerCase();
+// }
+
+// console.log(vowelStart("oranges, apples, melon, pineapple"));
+
+// function splitByValue(k, elements){
+//       let firstPart=[]
+//       let secoundPart=[]
+//       for (let i = 0; i < elements.length; i++) {
+//         const element = elements[i];
+//         if (element < k) {
+//           firstPart.push(element)
+//         }else secoundPart.push(element)
+//       }
+//       return firstPart.concat(secoundPart)
+// }
+
+// console.log(splitByValue(5,[1, 3, 5, 7, 6, 4, 2]), [1, 3, 4, 2, 5, 7, 6]);
+
+// function completeSeries(arr) {
+//   if ([...new Set([...arr])].length !== arr.length) {
+//     return [0];
+//   }
+//   let maxNum = Math.max(...arr);
+//   let finalArr = [];
+
+//   for (let i = 0; i <= maxNum; i++) {
+//     finalArr.push(i);
+//   }
+//   return finalArr;
+// }
+
+// console.log(completeSeries([1, 4, 6]));
+
+// function spongeMeme(sentence) {
+//   let a = sentence.split("");
+//   let fin = "";
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     if (i % 2 == 0) {
+//       fin += element.toUpperCase();
+//     } else fin += element.toLowerCase();
+//   }
+
+//   return fin;
+//   console.log(fin);
+// }
+
+// console.log(
+//   spongeMeme("stop Making spongebob Memes!"),
+//   "StOp mAkInG SpOnGeBoB MeMeS!"
+// );
+
+// function matrix(array) {
+//   let finArr = array;
+//   for (let i = 0; i < finArr.length; i++) {
+//     if (finArr[i][i] < 0) {
+//       finArr[i][i] = 0;
+//     } else finArr[i][i] = 1;
+//   }
+//   return finArr;
+// }
+
+// console.log(
+//   matrix([
+//     [-1, 4, -5, -9, 3],
+//     [6, -4, -7, 4, -5],
+//     [3, 5, 0, -9, -1],
+//     [1, 5, -7, -8, -9],
+//     [-3, 2, 1, -5, 6],
+//   ])
+// );
+
+// function procedure(n) {
+//   let multi = [];
+//   let a = n;
+
+//   while (n <= 100) {
+//     multi.push(n);
+//     n += a;
+//   }
+//   multi = multi.map((item) => {
+//     return item
+//       .toString()
+//       .split("")
+//       .reduce((sum, el) => +sum + +el, 0);
+//   });
+//   return multi.reduce((sum, el) => sum + el, 0);
+// }
+
+// console.log(procedure(35), 15);
+
+// function oddBall(arr) {
+//   let indexOdd = arr.indexOf("odd");
+//   return arr.filter((item) => item == indexOdd).length > 0;
+// }
+
+// console.log(oddBall(["even", 10, "odd", 3, "even"]), true);
+
+// function sexy_prime(x, y) {
+//   if (x > y) {
+//     [x, y] = [y, x];
+//   }
+
+//   if (x !== 1 && y - x == 6) {
+//     return true;
+//   }
+// }
+// console.log(sexy_prime(5, 11), true);
+
+// function battle(x, y) {
+
+//   let a =("a".charCodeAt()-96)/2
+//   let b ="A".charCodeAt()-65
+
+//   console.log(b);
+
+//   let firstScore=0
+//   let secoundScore=0
+
+//   for (let i = 0; i < x.length; i++) {
+//     const element = x[i];
+//     if (element === element.toUpperCase()) {
+//       firstScore +=element.charCodeAt()-64
+//     }else{
+//       firstScore +=(element.charCodeAt()-96)/2
+//     }
+
+//   }
+//   for (let i = 0; i < y.length; i++) {
+//     if (y[i] === y[i].toUpperCase()) {
+//       secoundScore +=y[i].charCodeAt()-64
+//     }else{
+//       secoundScore +=(y[i].charCodeAt()-96)/2
+//     }
+//   }
+
+//   return firstScore>secoundScore?x:firstScore<secoundScore?y:"Tie!"
+
+// }
+
+// console.log(battle("v", "Blz"));
+
+// function getLargerNumbers() {
+//   let a = [13, 64, 15, 17, 88];
+//   let b = [23, 14, 53, 17, 80];
+
+//   console.log(a);
+//   console.log(b);
+//   let finalArr = [];
+//   for(let i =0;i<a.length;i++){
+//     console.log(a[i]);
+//     if(a[i]>=b[i]){
+//       finalArr.push(a[i])
+//     }else{
+//       finalArr.push(b[i])
+//     }
+//   }
+//   return a.map((item,i)=>item>=b[i]?item:b[i])
+
+// }
+
+// console.log(getLargerNumbers());
+
+// function solution(pairs) {
+//   let final = "";
+//   for (const key in pairs) {
+//     console.log(key);
+//     final += key + " = " + pairs[key] + ",";
+//   }
+//   return final.slice(0, -1);
+// }
+
+// console.log(solution({ a: 1, b: "2" }));
+
+// function keysAndValues(data){
+//   let a = Object.entries(data)
+
+//   console.log(a);
+
+//   let f =[]
+//   let s =[]
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     f.push(element[0])
+//     s.push(element[1])
+//   }
+
+//   return [f,s]
+
+// }
+// console.log(keysAndValues({a: 1, b: 2, c: 3}));
+
+// function caffeineBuzz(n) {
+//   let finalWord = "";
+//   if (n % 3 == 0) {
+//     finalWord = "Java";
+//   }
+//   if (n % 12 == 0) {
+//     finalWord = "Coffee";
+//   }
+//   if (n % 2 == 0 && finalWord !=="") {
+//     finalWord += "Script";
+//   }
+//   if (finalWord ==="") {
+//     return "mocha_missing!"
+//   }
+//   return finalWord;
+// }
+
+// console.log(caffeineBuzz(4));
+
+// function findOdd(A) {
+//   let obj = {};
+//   for (let i = 0; i < A.length; i++) {
+//     const element = A[i];
+//     obj[element] = (obj[element] || 0) + 1;
+//   }
+//   console.log(obj);
+//   for (const key in obj) {
+//     if (obj[key] % 2 !== 0) {
+//       return key;
+//     }
+//   }
+// }
+// console.log(
+//   findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]),
+//   5
+// );
+
+// function pluck(objs, name) {
+// return objs.map((item)=>item[name])
+// }
+
+// console.log(pluck([{a:1}, {a:2}], 'a'), [1,2]);
+
+// function bingo(a) {
+//   let d = "BINGO";
+
+//   let letters = [];
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     letters.push(String.fromCharCode(element + 64));
+//   }
+
+//   return [...d].every((item) => letters.includes(item)) ? "WIN" : "LOSE";
+// }
+
+// console.log(bingo([21, 13, 7, 5, 14, 7, 15, 9, 10]), "WIN");
+
+// function arrayMash (array1, array2) {
+
+//   let finArr =[]
+
+//   for (let i = 0; i < array1.length; i++) {
+//     const element = array1[i];
+//     finArr.push(array1[i],array2[i])
+//   }
+//   return finArr
+
+// }
+
+// console.log(arrayMash([1, 2, 3], ['a', 'b', 'c']));
+
+// function matchArrays(v,r){
+
+//   let count =0
+//   for (let i = 0; i < v.length; i++) {
+//     const element = v[i];
+//     if (r.includes(element)) {
+//       count++
+//     }
+//   }
+// return count
+
+// }
+// console.log(matchArrays(['incapsulation','OOP','array'],
+// ['time', 'propert','paralelism','OOP']),1);;
+
+// function swapHeadAndTail(arr) {
+
+//   let lenArr = arr.length;
+//   if (lenArr % 2 == 0) {
+
+//     return arr.slice(lenArr / 2, lenArr).concat(arr.slice(0, lenArr / 2));
+//   }else{
+//     return arr.slice(Math.ceil(lenArr / 2), lenArr).concat(arr.slice(arr.length/2,arr.length/2+1)).concat(arr.slice(0, lenArr / 2));
+//   }
+// }
+
+// console.log((swapHeadAndTail([1, 2, 3, 4,5])));
+
+// function averageLength(arr) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     sum += element.length;
+//   }
+//   let adv = Math.round(sum / arr.length);
+//   let finalArr = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let el = arr[i];
+//     finalArr.push(el[0].repeat(adv));
+//   }
+//   return finalArr;
+// }
+
+// console.log(averageLength(["aa", "bb", "ddd", "eee"]));
+
+// function whatCentury(year) {
+//   let a = `${Math.ceil(year / 100)}`;
+//   let end = "";
+//   console.log(a[1]);
+//   if (a < 21) {
+//     end += "th";
+//   } else if (a[1] === "1") {
+//     end = "th";
+//   } else if (a[1] === "2") {
+//     end = "nd";
+//   } else if (a[1] === "3") {
+//     end = "rd";
+//   }
+//   console.log(end);
+//   return a + end;
+// }
+
+// console.log(whatCentury(2211));
+
+// var arrayLeaders = (numbers) => {
+//   let finalArr = [];
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     let sum = 0;
+//     const element = numbers[i];
+//     for (let j = i + 1; j < numbers.length; j++) {
+//       sum += numbers[j];
+//     }
+//     if (numbers[i] > sum) {
+//       finalArr.push(numbers[i]);
+//     }
+//   }
+
+//   return finalArr;
+// };
+
+// console.log(arrayLeaders([-36, -12, -27]));
+
+// function unusedDigits(...dig) {
+//   let a = dig.join("");
+//   let finNum = "";
+
+//   for (let i = 0; i < 10; i++) {
+//     if (!a.includes(i)) {
+//       finNum += i;
+//     }
+//   }
+
+//   return finNum;
+// }
+
+// console.log(unusedDigits(12, 34, 56, 78));
+
+// function isNice(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+
+//     if (!arr.includes(arr[i]+ 1) && !arr.includes(arr[i] - 1)) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// console.log(isNice([]));
+
+// function evenAndOdd(num) {
+//   let a = num.toString().split("");
+//   let even = a.filter((item) => item % 2 == 0).join("");
+//   let odd = a.filter((item) => item % 2 !== 0).join("");
+//   return [+even, +odd];
+// }
+
+// console.log(evenAndOdd(126453));
+
+// var uniqueInOrder=function(it){
+
+//   let fin =[]
+
+//   for (let i = 0; i < it.length; i++) {
+//     const element = it[i];
+//     if (it[i] !== it[i+1] ) {
+//       fin.push(it[i])
+//     }
+//   }
+
+// return fin
+
+// }
+
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
+
+// function ArithmeticSequenceSum(a, r, n) {
+//   let sum = 0;
+
+//   for (let i = 0; i < n; i++) {
+//     sum += i * r + a;
+//   }
+
+//   return sum;
+// }
+
+// console.log(ArithmeticSequenceSum(3, 2, 20), 440);
+
+// function findDup(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
+//       return arr[i];
+//     }
+//   }
+// }
+
+// console.log(findDup([1, 2, 4, 2, 3]), 2);
+
+// function palindrome(num) {
+//   if (typeof num !== "number" || num < 0) {
+//     return "Not valid";
+//   }
+//   let a = num.toString().split("");
+//   let b = num.toString().split("").reverse();
+
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] !== b[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(palindrome("aa"), true);
+
+// function factorial(n) {
+//   if (n < 0) return null;
+//   let sum = 1;
+//   for (let i = 1; i <= n; i++) {
+//     sum *= i;
+//   }
+//   return sum;
+// }
+// console.log(factorial(5));
+
+// function reOrdering(text){
+//   let a = text.split(" ")
+
+//   let finalStr=""
+
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i][0] == a[i][0].toUpperCase()) {
+//       finalStr = a[i] +" "
+//     }
+//   }
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i][0] == a[i][0].toLowerCase()) {
+//       console.log(a[i]);
+//       finalStr += a[i]+" "
+//     }
+
+//   }
+
+//   return finalStr.trim()
+// }
+
+// console.log(reOrdering('wario LoBan hello'), 'LoBan wario hello');;
+
+// function cutFruits(fruits){
+
+//   let frName =[ 'apple',
+//   'pear',
+//   'banana',
+//   'watermelon',
+//   'grape',
+//   'plum',
+//   'blueberry',
+//   'persimmon', ]
+
+//   let finArr=[]
+
+//   fruits.forEach(fruit => {
+
+//     if (frName.includes(fruit)) {
+
+//       if (fruit.length %2 !==0) {
+//          console.log(fruit);
+//          finArr.push(fruit.slice(0,Math.ceil(fruit.length/2)))
+//          finArr.push(fruit.slice(Math.ceil(fruit.length/2)))
+//       }
+//       else{
+//         finArr.push(fruit.slice(0,Math.ceil(fruit.length/2)))
+//         finArr.push(fruit.slice(Math.ceil(fruit.length/2)))
+
+//       }
+//     }else{
+//       finArr.push(fruit)
+//     }
+
+//   });
+//   console.log(finArr);
+//   return finArr
+// }
+
+// console.log(cutFruits(["apple","pear","banana","bomb"]),["app","le","pe","ar","ban","ana","bomb"]);
+
+// function findAB(numbers, c) {
+//   let pairs = [];
+
+//   for (let i = 0; i < numbers.length; i++) {
+
+//     for (let j = i+1; j < numbers.length; j++) {
+
+//       if (numbers[i] * numbers[j] == c) {
+//         console.log(numbers[i],numbers[j]);
+//         pairs.push([numbers[i],numbers[j]])
+//       }
+
+//     }
+//   }
+//   if (pairs.length<1) {
+//     return null
+//   }else{
+//     return pairs[0]
+//   }
+//   console.log(pairs[0]);
+// }
+
+// console.log(findAB([1, 2, 3, 6], 6), [1, 6]);
+
+// function countArara(n) {
+
+//   const obj ={
+//     1:"anane",
+//     2:"adak"
+//   }
+
+//   final=""
+
+//   for (let i = 2; i <= n; i+=2) {
+//     final +=obj[2]+" "
+//     console.log(i);
+//   }
+//   if (n%2 !==0) {
+//     final +=obj[1]+" "
+//   }
+//   return final.trim()
+// }
+
+// console.log(countArara(3));;
+
+// function invertHash(hash) {
+//   let c = {};
+
+//   for (let key in hash) {
+//     let a = key;
+//     let b = hash[key];
+
+//     c[b] = a;
+//   }
+
+//   return c
+// }
+
+// console.log(invertHash({ hello: "world", foo: "bar" }));
+
+// function reOrdering(text) {
+//   let a = text.split(" ");
+
+//   let fil = a.filter((item, i) => item[0] !== item[0].toUpperCase()).join(" ");
+//   let fin = "";
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     if (element[0] === element[0].toUpperCase()) {
+//       fin += element + " " + fil;
+//     }
+//   }
+
+//   return fin.trim();
+// }
+
+// console.log(reOrdering("wario LoBan hello"), "LoBan wario hello");
+
+// function findAB(numbers,c){
+
+//   let finalArr=[]
+
+//   for (let i = 0; i < numbers.length; i++) {
+
+//     for (let j = i+1; j < numbers.length; j++) {
+//       const element = numbers[j];
+//       if (numbers[i] * numbers[j] == c) {
+//         finalArr.push(numbers[i],numbers[j])
+//       }
+//     }
+//   }
+
+//   if (finalArr.length <2) {
+//     return null
+//   }
+// return finalArr.slice(0,2)
+// }
+
+// console.log(findAB([1,2,3,4,5,6,5],15), [3,5]);;
+
+// function similarity(a, b) {
+//   let elInBoth = [];
+//   let comb = [];
+
+//   for (let i = 0; i < a.length; i++) {
+//     if (b.includes(a[i])) {
+//       elInBoth.push(a[i]);
+//     }
+//   }
+
+//   comb = a.concat(b);
+//   let c = [...new Set(comb)];
+//   return elInBoth.length / c.length;
+// }
+// console.log(similarity([1, 2, 4, 6, 7], [2, 3, 4, 7]), 0.5);
+
+// function scratch(lottery){
+//   let a = lottery.join(" ").split(" ")
+//   let sum =0
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     console.log(a[i]);
+//     if (a[i] === a[i+1] ) {
+//       let c = a[i]
+//       if (c == a[i+2]) {
+//         console.log(a[i+3]);
+//         sum +=+a[i+3]
+//       }
+//     }
+//   }
+
+// console.log(sum);
+//   console.log(a);
+
+// }
+
+// console.log(scratch([
+//   "tiger tiger tiger 100",
+//   "rabbit dragon snake 100",
+//   "rat ox pig 1000",
+//   "dog cock sheep 10",
+//   "horse monkey rat 5",
+//   "dog dog dog 1000"
+//   ]),1100);
+
+// function playerManager(players) {
+//   if (players.length < 1) {
+//     return [];
+//   }
+//   let a = players.split(", ");
+
+//   console.log(a);
+
+//   let arr = [];
+//   for (let i = 0; i < a.length; i += 2) {
+//     let obj = {};
+//     const element = a[i];
+//     obj["player"] = a[i];
+//     obj["contact"] = +a[i + 1];
+//     console.log(obj);
+//     arr.push(obj);
+//   }
+//   return arr;
+// }
+
+// console.log(playerManager("John Doe, 8167238327, Haris Doe, 8163723827"));
+
+// function convert(number) {
+//   let num = [];
+//   while (number.length > 0) {
+//     num.push(number.slice(0, 2));
+//     number = number.slice(2);
+//   }
+//   let finStr = "";
+
+//   for (let i = 0; i < num.length; i++) {
+//     const element = num[i];
+//     console.log(element);
+//     finStr += String.fromCharCode(element);
+//   }
+
+//   return finStr;
+// }
+
+// console.log(convert("73327673756932858080698267658369"));
+
+// function stickyCalc(operation, val1, val2) {
+//   let a = Math.round(val1).toString();
+//   let b = Math.round(val2).toString();
+//   let c = a + b;
+
+//   if (operation == "+") {
+//     return Math.round(+c + val2);
+//   }
+//   if (operation == "-") {
+//     return +c - val2;
+//   }
+//   if (operation == "*") {
+//     return c * val2;
+//   }
+//   if (operation == "/") {
+//     return Math.round(c / val2);
+//   }
+// }
+// console.log(stickyCalc("+", 4.7, 7.2), 54);
+
+// function digPow(n, p){
+
+//   let a = n.toString().split("")
+
+//   let sum =0
+
+//   for (let i = 0; i < a.length; i++) {
+//     const element = a[i];
+//     sum += Math.pow(a[i],p+i)
+//   }
+//   if (sum%n==0) {
+//     return sum/n
+//   }
+//   return -1
+// console.log(sum);
+// }
+
+// console.log(digPow(46288, 3), 51);
+
+// function expandedForm(num) {
+//   num = num.toString();
+//   let a = [];
+//   let b = [];
+//   for (let i = num.length - 1; i >= 0; i--) {
+//     console.log(i);
+//     a.push("0".repeat(i));
+//   }
+
+//   for (let j = 0; j < num.length; j++) {
+//     const element = num[j];
+//     console.log(element);
+//     b.push(num[j] + a[j]);
+//   }
+//   let c = b.filter((item) => item > 0);
+
+//   let fin = "";
+//   for (let k = 0; k < c.length; k++) {
+//     const element = c[k];
+//     fin += " + " + c[k];
+//   }
+//   return fin.slice(3);
+//   console.log(fin.slice(3));
+// }
+// console.log(expandedForm(70304), "70000 + 300 + 4");
+
+// function solution(string) {
+//   let a = "";
+
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] === string[i].toUpperCase()) {
+//       a += " ";
+//     }
+
+//     a += string[i];
+//   }
+// return a
+// }
+
+// console.log(solution("camAdsFsd"));
+
+// function count (string) {
+
+//   let obj ={}
+
+//   for(let i=0;i<string.length;i++){
+//     obj[string[i]] = (obj[string[i]] + 1) || 1
+//   }
+//   return obj
+// }
+
+// console.log(count("abscsa"));
+
+// function twoSum(numbers, target) {
+//   for (let i = 0; i < numbers.length - 1; i++) {
+//     const element = numbers[i];
+//     for (let j = i + 1; j < numbers.length; j++) {
+//       console.log(numbers[i]);
+//       console.log(numbers[j]);
+//       if (numbers[i] + numbers[j] == target) {
+//         return [numbers.indexOf(numbers[i]), numbers.indexOf(numbers[j])];
+//       }
+//     }
+//   }
+// }
+
+// console.log(twoSum([2, 2, 3], 4));
