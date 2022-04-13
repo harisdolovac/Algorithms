@@ -5435,3 +5435,29 @@ function maskify(cc) {
 // }
 
 // console.log(twoSum([2, 2, 3], 4));
+
+// function arrAdder(arr) {
+//   let str = "";
+
+//   for (let i = 0; i < arr[0].length; i++) {
+//     const element = arr[i];
+//     console.log(arr[i].length);
+//     for (let j = 0; j < arr[i].length; j++) {
+//       if (arr[j][i] !== undefined) {
+//         str += arr[j][i];
+//       }
+//     }
+//     str += " ";
+//   }
+
+//   return str.trim();
+// }
+
+// let Adder = [
+//   ["J", "L", "L", "M"],
+//   ["u", "i", "i"],
+//   ["", "v", "f", "n"],
+//   ["", "e", ""],
+// ];
+
+// console.log(arrAdder(Adder));
