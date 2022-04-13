@@ -5461,3 +5461,28 @@ function maskify(cc) {
 // ];
 
 // console.log(arrAdder(Adder));
+
+// const xMarksTheSpot = (input) => {
+//   let a = [];
+
+//   let b = input.forEach((element, i) => {
+//     for (let j = 0; j < element.length; j++) {
+//       if (element[j] == "x") {
+//         console.log(i, j);
+//         a.push(i, j);
+//       }
+//     }
+//   });
+//   return a.length < 3 ? a : [];
+// };
+
+// const a = [
+//   ["o", "o", "o", "0", "o", "o", "o", "o"],
+//   ["o", "o", "o", "o", "o", "o", "o", "o"],
+//   ["o", "o", "o", "o", "o", "o", "o", "o"],
+//   ["o", "o", "o", "o", "o", "o", "o", "o"],
+//   ["o", "o", "o", "o", "o", "o", "x", "o"],
+//   ["o", "o", "o", "o", "o", "o", "o", "o"],
+// ];
+
+// console.log(xMarksTheSpot(a));
