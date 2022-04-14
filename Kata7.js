@@ -5509,3 +5509,18 @@ function maskify(cc) {
 // }
 
 // console.log(sumFromString("as1+1=20"));
+
+// function isAllPossibilities(x) {
+//   console.log(x);
+//   x = x.sort();
+//   for (let i = 0; i < x.length; i++) {
+//     const element = x[i];
+//     console.log(i);
+//     if (element !== i) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(isAllPossibilities([0, 2, 1, 3, 4]));
