@@ -5486,3 +5486,16 @@ function maskify(cc) {
 // ];
 
 // console.log(xMarksTheSpot(a));
+
+// function dropCap(n) {
+//   let a = n.split(" ");
+//   return a
+//     .map((item, i) =>
+//       item.length > 2
+//         ? item[0].toUpperCase() + item.slice(1).toLowerCase()
+//         : item
+//     )
+//     .join(" ");
+// }
+
+// console.log(dropCap("Apple of Banana"), "Apple Banana");
