@@ -5499,3 +5499,13 @@ function maskify(cc) {
 // }
 
 // console.log(dropCap("Apple of Banana"), "Apple Banana");
+
+// function sumFromString(str) {
+//   return str
+//     .replace(/[^0-9]/g, " ")
+//     .split(" ")
+//     .filter((item) => item !== "")
+//     .reduce((sum, item) => sum + +item, 0);
+// }
+
+// console.log(sumFromString("as1+1=20"));
