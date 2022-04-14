@@ -5525,11 +5525,34 @@ function maskify(cc) {
 
 // console.log(isAllPossibilities([0, 2, 1, 3, 4]));
 
-function sentencify(words) {
-  let finWord = words[0][0].toUpperCase();
+// function sentencify(words) {
+//   let finWord = words[0][0].toUpperCase();
 
-  finWord += words.join(" ").slice(1) + ".";
-  return finWord;
+//   finWord += words.join(" ").slice(1) + ".";
+//   return finWord;
+// }
+
+// console.log(sentencify(["let", "there", "be", "light"]));
+
+function dominator(arr) {
+  let obj = {};
+
+  for (let i = 0; i <= arr.length; i++) {
+    obj[arr[i]] = (obj[arr[i]] || 0) + 1;
+  }
+  let b = 0;
+  let c = 0;
+
+  for (let key in obj) {
+    if (obj[key] > b) {
+      b = obj[key];
+      c = key;
+    }
+  }
+
+  console.log(b);
+
+  return b > arr.length / 2 ? c : -1;
 }
 
-console.log(sentencify(["let", "there", "be", "light"]));
+console.log(dominator([3, 4, 3, 2, 3, 1, 3, 3]), 3);
