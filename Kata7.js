@@ -5524,3 +5524,12 @@ function maskify(cc) {
 // }
 
 // console.log(isAllPossibilities([0, 2, 1, 3, 4]));
+
+function sentencify(words) {
+  let finWord = words[0][0].toUpperCase();
+
+  finWord += words.join(" ").slice(1) + ".";
+  return finWord;
+}
+
+console.log(sentencify(["let", "there", "be", "light"]));
